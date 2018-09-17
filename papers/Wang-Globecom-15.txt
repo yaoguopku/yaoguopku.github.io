@@ -1,0 +1,10 @@
+@inproceedings{Chen-Globecom-14,
+ author = {Haoyu Wang and Yao Guo and Zihao Tang and Guangdong Bai and Chen, Xiangqun},
+ title = {Reevaluating Android Permission Gaps with Static and Dynamic Analysis},
+ booktitle = {Proceedings of GlobeCom},
+ series = {GlobeCom'15},
+ year = {2015},
+ location = {San Diego, CA, USA},
+ pages = {},
+ numpages = {6},
+}

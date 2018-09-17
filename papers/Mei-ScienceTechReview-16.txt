@@ -1,0 +1,20 @@
+@ARTICLE{Mei-STR-2016,
+  author =       {Hong Mei and Yao Guo},
+  title =        {Development and present situation of {I}nternetware operating systems},
+  journal =      {Science \& Technology Review},
+  volume={34},
+  number={14},
+  pages={33-41},
+  year={2016},
+  note =         {(in Chinese)},
+}
+
+@article{Mei-STR-2016c,
+  title={面向网构软件的操作系统:发展及现状},
+  author={梅宏 and 郭耀},
+  journal={科技导报},
+  volume={34},
+  number={14},
+  pages={33-41},
+  year={2016},
+}

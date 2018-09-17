@@ -1,0 +1,21 @@
+@inproceedings{Wang-WWW-2017,
+ author = {Wang, Haoyu and Liu, Zhe and Guo, Yao and Chen, Xiangqun and
+ Zhang, Miao and Xu, Guoai and Hong, Jason},
+ title = {An Explorative Study of the Mobile App Ecosystem from App
+ Developers' Perspective},
+ booktitle = {Proceedings of the 26th International Conference on World
+ Wide Web},
+ series = {WWW '17},
+ year = {2017},
+ isbn = {978-1-4503-4913-0},
+ location = {Perth, Australia},
+ pages = {163--172},
+ numpages = {10},
+ url = {https://doi.org/10.1145/3038912.3052712},
+ doi = {10.1145/3038912.3052712},
+ acmid = {3052712},
+ publisher = {International World Wide Web Conferences Steering Committee},
+ address = {Republic and Canton of Geneva, Switzerland},
+ keywords = {android, app clone, app developers, app ecosystem, google
+ play, mobile apps, mobile privacy},
+}

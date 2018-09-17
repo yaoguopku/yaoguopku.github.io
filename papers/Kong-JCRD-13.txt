@@ -1,0 +1,24 @@
+@ARTICLE{Kong-JCRD-13,
+  author =       {Junjun Kong and Yao Guo and Xiangqun Chen and Weizhong Shao},
+  title =        {An Approach to Building Systems and Applications of Internet of Things with Smart Things},
+  journal =      {Journal of Computer Research and Development},
+  year =         {2013},
+  volume =       {50},
+  number =       {6},
+  pages =        {1198--1209},
+  month =        {jun},
+  note =         {(in Chinese)},
+}
+
+
+@ARTICLE{Kong-JCRD-13c,
+  author =       {孔俊俊 and 郭耀 and 陈向群 and 邵维忠},
+  title =        {一种基于智能物体的物联网系统及应用开发方法},
+  journal =      {计算机研究与发展},
+  year =         {2013},
+  volume =       {50},
+  number =       {6},
+  pages =        {1198--1209},
+  month =        {jun},
+  note =         {},
+}

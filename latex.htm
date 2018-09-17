@@ -1,0 +1,289 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>Latex Guide for Beginners</title>
+	<style type="text/css">
+.style1 {
+				font-family: "Times New Roman";
+}
+</style>
+</head>
+
+
+<body bgcolor="#ffffcc">
+
+
+<p><b><font face="Verdana" size="4">Latex Information</font></b></p>
+
+<p><i><font face="Times New Roman">Latex is highly recommended for papers 
+submitting to international conferences and journals.&nbsp;</font></i></p>
+
+
+<hr align="left" width="700">
+
+ 
+<table style="border-collapse: collapse;" border="0" cellpadding="2" cellspacing="2" width="750">
+
+ 
+  <tbody>
+    <tr>
+
+
+      <td bordercolor="#800000" style="border-style: none; border-width: medium;" width="700">
+
+      <font face="Arial Black">For Starters - How to write a paper with Latex</font>
+      <p>
+      <b><font face="Times New Roman">&nbsp; Software</font></b></p>
+
+      <ul>
+
+	<li><font face="Times New Roman"><b>Windows</b> - You are recommended to 
+	download a software package from <a href="http://www.ctex.org/CTeX">
+	http://www.ctex.org/CTeX</a> which includes the Latex compiler (<b>MikTex</b>), an 
+	integrated editor (<b>WinEdt</b>), as well as GSview and Ghostscript. The Chinese 
+	extension (fonts etc) is not needed for writing English papers.</font></li>
+
+	<li><font face="Times New Roman"><b>Linux/Unix </b>- Emacs/vim + the latex 
+	package (coming with Linux distribution) usually is sufficient.</font></li>
+
+      </ul>
+
+      <p><b><font face="Times New Roman">&nbsp; To Start With...</font></b></p>
+
+      <ul>
+
+	<li><font face="Times New Roman">Start with a template (see below for more 
+	ACM/IEEE templates)</font>
+          <ul>
+
+		<li><font face="Times New Roman">Download IEEE templates from
+		<a href="http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/">
+		http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/</a></font></li>
+
+		<li><font face="Times New Roman">Start a conference or journal paper 
+		with </font><i>bare_conf.tex</i> or <i>bare_jrnl.tex </i>provided.</li>
+
+	
+          </ul>
+
+	</li>
+
+	<li><font face="Times New Roman">Familiarize yourself with the following essential structures</font>
+          <ul>
+
+		<li><font face="Times New Roman"><b>Title</b>: <i>\title, \author, 
+		\thanks</i> ...</font></li>
+
+		<li><font face="Times New Roman"><b>Section</b>: <i>\section, 
+		\subsection, \subsubsection</i> ...</font></li>
+
+		<li><font face="Times New Roman"><b>Lists: </b><i>\begin{enumerate} 
+		\item ... \item ... \end{enumerate}; </i>or use <i>itemize </i>instead 
+		of <i>enumberate.</i></font></li>
+
+		<li><font face="Times New Roman"><b>Figures &amp; Tables</b>: <i>\begin{figure[*]) 
+		...\end{figure[*]}, \begin{table[*]) ...\end{table[*]}</i>, etc. (Use
+		<span style="background-color: rgb(255, 255, 0);">*</span> to spread the figure 
+		across two columns)</font></li>
+
+		<li><font face="Times New Roman"><b>Include EPS figures: </b>\includegraphics{}, 
+		\epsfig{}, etc. (see below for how to create an EPS figure)</font></li>
+
+		<li><font face="Times New Roman"><b>Labels:</b> use <i>\label</i> to 
+		label ALL section headings, figures, and tables, and use <i>\ref </i>for 
+		ALL cross-references.</font></li>
+
+		<li><font face="Times New Roman"><b>Bibliography: </b>BibTex is 
+		recommended. All bibliography entries could be compiled in a separate 
+		file such that it could be used for multiple papers.</font></li>
+
+	
+          </ul>
+
+	</li>
+
+      </ul>
+
+      <p><b><font face="Times New Roman">&nbsp; Frequently Used Templates</font></b></p>
+
+      <ul>
+
+	<li><b><font face="Times New Roman">ACM Proceedings Templates</font></b>
+          <ul>
+
+		<li><b><font face="Times New Roman">
+		<a href="http://www.acm.org/sigs/publications/proceedings-templates">
+		http://www.acm.org/sigs/publications/proceedings-templates</a> </font>
+		</b></li>
+
+	
+          </ul>
+
+	</li>
+
+	<li><b><font face="Times New Roman">IEEE Transactions</font></b>
+          <ul>
+
+		<li><b><font face="Times New Roman">IEEETran Home page:
+		<a href="http://www.michaelshell.org/tex/ieeetran/">
+		http://www.michaelshell.org/tex/ieeetran/</a> </font></b></li>
+
+		<li><b><font face="Times New Roman">
+		<a href="http://www.ieee.org/organizations/pubs/confpub/auxfiles/README.txt">
+		Official IEEETran Readme</a>&nbsp; &amp;&nbsp;
+		<a href="http://www.computer.org/portal/cms_docs_ieeecs/ieeecs/publications/author/transguide/IEEEtran_HOWTO.pdf">
+		HOWTO</a></font></b></li>
+
+	
+          </ul>
+
+	</li>
+
+	<li><b><font face="Times New Roman">IEEE Computer Society Conferences</font></b>
+          <ul>
+
+		<li><b><font face="Times New Roman">
+		<a href="http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEconf/">
+		http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEconf/</a>
+		</font></b></li>
+
+	
+          </ul>
+
+	</li>
+
+      </ul>
+
+      <hr>
+      <p><b><font face="Times New Roman">Useful Tips </font></b></p>
+
+      <ul>
+
+	<li><b><font face="Times New Roman">How to convert Word (.doc) documents to 
+	Latex: </font></b>
+	
+          <ul>
+
+		<li><a href="http://www.ctan.org/tex-archive/support/word2latex/">
+		wsW2LTX</a> developed by Ingo H. de Boer and distributed by CTAN.org.</li>
+
+	
+          </ul>
+
+	</li>
+
+	<li><b><font face="Times New Roman">How to convert OLE (Visio, Excel, 
+	PowerPoint...) figures to EPS</font></b>
+          <ul>
+
+		<li><font face="Times New Roman">I recommend the <i>
+		<a href="http://oletex.sourceforge.net/">OLETeX Utility</a></i>.</font></li>
+
+		<li><font face="Times New Roman">You can always use a PS printer (e.g., 
+		HP ColorJet 5 PS) to print any document into a .ps file, then open it 
+		using GSview to convert it to .eps (don't forget to calculate the 
+		bounding box!!).</font></li>
+
+	
+          </ul>
+
+	</li>
+
+      <li class="style1"><strong>Hyphenation</strong><ul>
+					<li class="style1">To avoid frequent broken words, use \<strong>hyphenpenalty</strong>, 
+					and <strong>\tolerance. </strong>For example:<ul>
+									<li class="style1"><strong>\hyphenpenalty=5000
+									<br>
+									\tolerance=1000</strong></li>
+					</ul>
+					</li>
+					<li class="style1">To avoid incorrect hyphenation for a 
+					particular word, use \<strong>hyphenation</strong>. For 
+					example:<ul>
+									<li class="style1"><strong>\hyphenation{op-tical 
+									net-works semi-conduc-tor}</strong></li>
+					</ul>
+					</li>
+		</ul>
+	</li>
+
+      </ul>
+
+
+      <hr>
+
+      <p><b><font face="Times New Roman">Additional Reading Materials</font></b></p>
+
+      <ul>
+
+	<li><font face="Times New Roman">Latex Help from U. Florida:
+	<a href="http://web.image.ufl.edu/help/latex/">
+	http://web.image.ufl.edu/help/latex/</a></font></li>
+
+	<li>A web based <a href="http://www.personal.ceu.hu/tex/latex.htm">LaTeX 
+	help</a>, based on George D. Greenwade's LaTeX help for VMS machines. </li>
+
+	<li>LaTeX <a href="http://www.personal.ceu.hu/tex/cookbook.html">cookbook</a>: 
+	tricks and methods, LaTeX construct and their results. </li>
+
+	<li><a href="http://www.personal.ceu.hu/tex/essentia.tex">Essentials of 
+	LaTeX</a> by Jon Warbrik; a LaTeX file which can be downloaded, processed 
+	and printed out. Requires the
+	<a href="http://www.personal.ceu.hu/tex/hndout.sty">hndout.sty</a> style 
+	file. </li>
+
+	<li><a href="http://www.personal.ceu.hu/tex/gentle.tex">A gentle 
+	introduction to TeX</a> by Michael Doob; a plain tex file, process it by 
+	TeX. 
+	</li>
+
+	<li><a href="http://www.personal.ceu.hu/tex/symbols.tex">symbols.tex</a> is 
+	a LaTeX file which lists all (i.e. most of) available symbols in LaTeX with 
+	their names. </li>
+
+	<li><a href="http://www.personal.ceu.hu/tex/maltby.tex">An introduction to 
+	TeX and friends</a> by Gavin Maltby, a LaTeX file which was also used as a 
+	course handout. </li>
+
+	<li><a href="http://www.personal.ceu.hu/tex/doublespace.sty">Making double 
+	spacing in your document</a> </li>
+
+	<li><a href="http://www.dante.de/Welcome_english.html">www.dante.de</a> a 
+	German web site with a use collection of TeX related material. </li>
+
+	<li><a href="http://www.tex.ac.uk">www.tex.ac.uk</a> is a TeX archive in 
+	English, with almost anything you might want in connection with TeX. </li>
+
+      </ul>
+
+
+      <hr>
+
+      <font face="Times New Roman" size="2">Last modified:&nbsp; </font>
+
+　</td>
+
+
+    </tr>
+
+ 
+    <tr>
+
+
+      <td bordercolor="#800000" style="border-style: none; border-width: medium;" width="700">
+
+&nbsp;</td>
+
+
+    </tr>
+
+ 
+ 
+  </tbody>
+</table>
+
+</body>
+</html>

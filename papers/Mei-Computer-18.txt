@@ -1,0 +1,12 @@
+@ARTICLE{Mei-Computer-18, 
+author={H. Mei and Y. Guo}, 
+journal={Computer}, 
+title={Toward Ubiquitous Operating Systems: A Software-Defined Perspective}, 
+year={2018}, 
+volume={51}, 
+number={1}, 
+pages={50-56}, 
+keywords={operating systems (computers);ubiquitous computing;Internet of Things;IoT devices;function programmability;resource virtualization;software-defined perspective;ubiquitous operating systems;Cloud computing;Hardware;Operating systems;Programming;Resource virtualization;Software defined networking;Ubiquitous computing;Virtualization;Internetware;OS;Outlook;UOS;operating system;pervasive computing;programmability;software-defined;ubiquitous computing;ubiquitous operating system;virtualization}, 
+doi={10.1109/MC.2018.1151018}, 
+ISSN={0018-9162}, 
+month={January},}

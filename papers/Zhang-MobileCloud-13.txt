@@ -1,0 +1,8 @@
+@INPROCEEDINGS{Zhang-MobileCloud-13,
+author={Lin Zhang and Yao Guo and Xiangqun Chen},
+booktitle={2013 IEEE 7th International Symposium on Service Oriented System Engineering (SOSE), IEEE MobileCloud },
+title={Patronus: Augmented Privacy Protection for Resource Publication in Online Social Networks},
+year={2013},
+pages={578-583},
+keywords={authorisation;data privacy;electronic publishing;social networking (online);Android;GBAC;Patronus;augmented privacy protection;data access model;data publishing;group-based access control model;online social network;personal information;photo sharing;privacy information;privacy leakage;privacy policy;privacy requirement;resource publication;social data publication;video;On-line social networks;data owner and data involvers;privacy},
+doi={10.1109/SOSE.2013.14},}

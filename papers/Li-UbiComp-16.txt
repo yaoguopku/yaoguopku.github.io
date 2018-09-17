@@ -1,0 +1,18 @@
+BibTeX | EndNote | ACM Ref
+@inproceedings{Li:2016:PUM:2971648.2971693,
+ author = {Li, Yuanchun and Guo, Yao and Chen, Xiangqun},
+ title = {PERUIM: Understanding Mobile Application Privacy with permission-UI Mapping},
+ booktitle = {Proceedings of the 2016 ACM International Joint Conference on Pervasive and Ubiquitous Computing},
+ series = {UbiComp '16},
+ year = {2016},
+ isbn = {978-1-4503-4461-6},
+ location = {Heidelberg, Germany},
+ pages = {682--693},
+ numpages = {12},
+ url = {http://doi.acm.org/10.1145/2971648.2971693},
+ doi = {10.1145/2971648.2971693},
+ acmid = {2971693},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {android, functionality, mobile applications, permission, user interface (UI)},
+} 

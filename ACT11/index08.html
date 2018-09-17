@@ -1,0 +1,231 @@
+
+<head>
+<title>Advanced Compiler Techniques 2008</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+<!--
+div.Section1
+	{page:Section1;}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFCC">
+
+<p align="center"><b><font face="Times New Roman" size="6">Advanced Compiler 
+Techniques (Fall 2008)</font></b><font face="Times New Roman"><b><font size="6"><br>
+</font></b>(under construction)</font></p>
+<p align="center"><font face="Times New Roman"><a href="#meeting">Class Meetings</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#me">Instructors</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#outline">Course 
+</a></font><font face="Times New Roman"><a href="#outline">Syllabus</a>&nbsp;&nbsp;&nbsp; &nbsp;
+<a href="#notes">Course Project</a>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="#grading">Grading</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#links">Links</a></font></p>
+<hr size="1" color="#C0C0C0">
+<p><b><font face="Times New Roman"><a name="News_&amp;_Notifications:_">NEWS &amp; 
+NOTIFICATIONS:</a></font></b></p>
+<ul>
+	<li><b><font face="Times New Roman" color="#FF0000">10/23 -
+	<a href="project.htm">Course Project</a> Information Updated.</font></b></li>
+</ul>
+<hr size="1" color="#C0C0C0">
+<p><b><font face="Times New Roman"><a name="meeting"></a>CLASS MEETINGS</font></b></p>
+<ul>
+	<li><b><font face="Times New Roman" color="#FF0000">Time:&nbsp; 6:00-8:30pm 
+	(9-11) Thursdays</font></b></li>
+	<li><b><font face="Times New Roman" color="#FF0000">Location:&nbsp; 2#304</font></b></li>
+</ul>
+<p><b><font face="Times New Roman">Tentative Schedule (subject to change):</font></b></p>
+<table border="1" width="701" id="table3" style="position: relative; left: 12; margin-bottom: 4">
+	<tr>
+		<td align="center" width="72"><b>Date</b></td>
+				<td align="center"><b>Topic</b></td>
+				<td align="center" width="122"><b>Homework</b></td>
+				<td align="center" width="151"><b>Project Schedule</b></td>
+				</tr>
+	<tr>
+		<td align="center" width="72">9/18</td>
+				<td align="left"><font color="#FF0000">No Class</font></td>
+				<td align="center" width="122">&nbsp;</td>
+				<td align="center" width="151">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">9/25</td>
+				<td align="left">[<b>DragonBook S8.4-8.5, S8.7,</b>] Course Introduction/Compiler Review/Basic 
+				Optimization (<a href="lect1-intro.pdf">Slides)</a></td>
+				<td align="center" width="122">&nbsp;</td>
+				<td align="center" width="151">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">10/2</td>
+				<td align="left"><font color="#FF0000">No Class (Holiday)</font></td>
+				<td align="center" width="122">&nbsp;</td>
+				<td align="center" width="151">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" height="24" width="72">10/9</td>
+				<td align="left" height="24"><b>[DragonBook ]</b> Control Flow 
+				Analysis </td>
+				<td align="center" height="24" width="122"><a href="HW-1.pdf">HW 
+				#1</a></td>
+				<td align="center" height="24" width="151">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">10/16</td>
+				<td align="left"><b>[DragonBook S9.2, S9.3] </b>Data Flow 
+				Analysis </td>
+				<td align="center" width="122"><a href="HW-2.pdf">HW #2</a>&nbsp;</td>
+				<td align="center" width="151">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">10/23</td>
+				<td align="left">Course Project (<a href="project.htm">Introduction</a>,
+				<a href="soot-intro.pdf">Soot</a>), DFA Foundations (cont.)</td>
+				<td align="center" width="122">&nbsp;</td>
+				<td align="center" width="151">Project Introduction</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">10/30</td>
+				<td align="left">DFA Foundations (cont.)</td>
+				<td align="center" width="122">HW #3</td>
+				<td align="center" width="151">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72" height="25">11/6</td>
+				<td align="left" height="25">Optimizations based on DFA</td>
+				<td align="center" width="122" height="25">HW #4</td>
+				<td align="center" width="151" height="25">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">11/13</td>
+				<td align="left">&nbsp;SSA &amp; its Applications</td>
+				<td align="center" width="122">&nbsp;</td>
+				<td align="center" width="151">Project Proposal due</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">11/20</td>
+				<td align="left"><font color="#FF0000">Midterm</font> 
+				(tentative)</td>
+				<td align="center" width="122">&nbsp;</td>
+				<td align="center" width="151">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">11/27</td>
+				<td align="left">Pointer Analysis</td>
+				<td align="center" width="122">HW #5</td>
+				<td align="center" width="151">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">12/4</td>
+				<td align="left">Interprocedural Analysis</td>
+				<td align="center" width="122">&nbsp;</td>
+				<td align="center" width="151">Project Progress Report due</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">12/11</td>
+				<td align="left">Parallelism and Locality </td>
+				<td align="center" width="122">&nbsp;</td>
+				<td align="center" width="151">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">12/18</td>
+				<td align="left">Optimization for 
+				Multi-core/Many-core</td>
+				<td align="center" width="122">&nbsp;</td>
+				<td align="center" width="151">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">12/25</td>
+				<td align="left">Final Project Presentation</td>
+				<td align="center" width="122">&nbsp;</td>
+				<td align="center" width="151">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">1/1</td>
+				<td align="left"><font color="#FF0000">No Class (Holiday)</font></td>
+				<td align="center" width="122">&nbsp;</td>
+				<td align="center" width="151">Final Project Report due</td>
+				</tr>
+	</table>
+<hr size="1" color="#C0C0C0">
+<p><font face="Times New Roman"><b><a name="me"></a>INSTRUCTORS</b></font></p>
+<p><font face="Times New Roman"><b><a href="http://sei.pku.edu.cn/~yaoguo">Yao Guo</a></b><br>
+1428 Science Building<br>
+Telephone: 6275-3496<br>
+Email: yaoguo &#39;at&#39; sei.pku.edu.cn</font></p>
+<p><font face="Times New Roman">Office Hours: By appointment (Email preferred).</font></p>
+<p><font face="Times New Roman">TA: (to be determined).</font></p>
+<hr size="1" color="#C0C0C0">
+<p><b><font face="Times New Roman"><a name="outline"></a>COURSE SYLLABUS</font></b></p>
+<p><font face="Times New Roman">Built upon basic compiler knowledge, this course 
+covers advanced materials on compiler principles and techniques, including 
+data-flow analysis, basic compiler optimizations, SSA, pointer analysis, 
+localization and parallelization optimization, and recent progresses on program 
+analysis &amp; optimization. Students are required to work on a project to implement a new analysis or optimization, or use 
+materials learned in class to solve a practical problem.</font></p>
+<p><font face="Times New Roman"><b>Prerequisite</b>: undergraduate course on 
+compiler principles or techniques.</font></p>
+<p><b><font face="Times New Roman">Topics Covered:</font></b></p>
+<ol>
+	<li><font face="Times New Roman"><b>Compiler techniques review</b>: lexical 
+	&amp; syntax analysis, intermediate representation (AST), etc.</font></li>
+	<li><font face="Times New Roman"><b>Introduction</b> to compiler analysis &amp; 
+	optimization.</font></li>
+	<li><font face="Times New Roman"><b>Data flow analysis:</b> basic concepts 
+	(basic blocks, CFG, DFG, Def-Use Set), mathematic foundation (semi-lattice, formal representation), etc.</font></li>
+	<li><font face="Times New Roman"><b>Basic compiler optimizations</b>: 
+	constant propagation, basic loop optimization, partial redundancy 
+	elimination, SSA (static single assignment) and its application.</font></li>
+	<li><font face="Times New Roman"><b>Pointer analysis</b>: introduction, 
+	flow-insensitive analysis, context-sensitive/insensitive analysis, speed 
+	optimization, recent progress.</font></li>
+	<li><font face="Times New Roman"><b>Localization &amp; parallelization</b>: 
+	program localization optimization, parallelization optimization, 
+	optimization for multi-core/many-core.</font></li>
+	<li><font face="Times New Roman"><b>Advance topics</b>: (based on students&#39; 
+	interests) register allocation, dynamic compilation, garbage collection, 
+	etc.</font></li>
+</ol>
+<p><b><font face="Times New Roman">Recommended Text:</font></b></p>
+<ol>
+	<li><font face="Times New Roman">(Dragon Book) Aho, Lam, Sethi, &amp; Ullman, <b>Compilers: 
+	Principles, Techniques, &amp; Tools (Second Edition)</b>, Addison-Wesley, 2007. 
+	</font></li>
+</ol>
+<p><b><font face="Times New Roman">Reference Text:</font></b></p>
+<ol>
+	<li><font face="Times New Roman">(Whale Book) </font>Steven Muchnick,
+	<font face="Times New Roman"><b>Advanced Compiler Design and Implementation,</b></font><em style="color: red">
+	</em>Morgan Kaufman Publishers, 1997 </li>
+	<li><font face="Times New Roman">(Tiger Book)</font><span class="b24-bookauthor">Andrew 
+	W. Appel&nbsp;and&nbsp;Jens Palsberg</span>,<font face="Times New Roman"><b> Compiler 
+	Implementation in Java (2nd Ed.),</b> </font>Cambridge University Press, 
+	2002</li>
+	<li>(Ark Book) Keith D. Cooper, Linda Torczon,<font face="Times New Roman"><b> 
+	Engineering a Compiler, </b></font>Morgan Kaufman Publishers, 2003 </li>
+</ol>
+<p><b><font face="Times New Roman">Supplement Readings:</font></b></p>
+<ol>
+	<li><font face="Times New Roman">to be determined.</font></li>
+</ol>
+<hr size="1" color="#C0C0C0">
+<p><b><font face="Times New Roman"><a name="notes"></a>COURSE PROJECT</font></b></p>
+<p><font face="Times New Roman"><a href="project.htm">Detailed Project 
+Information</a>.</font></p>
+<hr size="1" color="#C0C0C0">
+<p><font face="Times New Roman"><b><a name="grading"></a>COURSE GRADING</b></font></p>
+<p><font face="Times New Roman">Grading will be based on the following 
+components:</font></p>
+<ul>
+	<li><font face="Times New Roman">Homework: 20%.</font></li>
+	<li><font face="Times New Roman">Midterm: 40%</font></li>
+	<li><font face="Times New Roman">Final Project: 30%</font></li>
+	<li><font face="Times New Roman">Class Participation: 10%. </font></li>
+</ul><hr size="1" color="#C0C0C0">
+<p><font face="Times New Roman"><b><a name="links"></a>LINKS</b></font></p>
+<ul>
+	<li><font face="Times New Roman">to be completed.</font></li>
+</ul>
+<hr size="1" color="#C0C0C0">
+<p><font face="Times New Roman">Last updated:
+<!--webbot bot="Timestamp" S-Type="EDITED" S-Format="%Y-%m-%d %H:%M:%S" startspan -->2011-01-10 11:24:26<!--webbot bot="Timestamp" i-checksum="25421" endspan --></font></p>

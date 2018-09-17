@@ -1,0 +1,9 @@
+@inproceedings{Yuan-MobileCloud-14,
+ author = {Pengfei Yuan and Yao Guo and Xiangqun Chen},
+ title = {Uniport: A Uniform Programming Support Framework for Mobile Cloud Computing},
+ booktitle = {The 3rd IEEE International Conference on Mobile Cloud Computing, Services and Engineering},
+ series = {MobileCloud'15},
+ year = {2015},
+ location = {San Francisco, CA},
+ pages = {},
+}

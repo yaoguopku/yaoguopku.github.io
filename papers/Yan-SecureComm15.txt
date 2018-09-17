@@ -1,0 +1,9 @@
+@inproceedings{Yan-SecureComm-15,
+ author = {Lin Yan and Yao Guo and Xiangqun Chen},
+ title = {SplitDroid: Isolated Execution of Sensitive Components for Mobile Applications},
+ booktitle = {11th International ICST Conference on Security and Privacy in Communication Networks (SecureCOMM ),},
+ series = {SecureComm'15},
+ year = {2015},
+ location = {San Francisco, CA},
+ pages = {},
+}

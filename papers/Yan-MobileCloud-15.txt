@@ -1,0 +1,9 @@
+@inproceedings{Yan-MobileCloud-15,
+ author = {Lin Yan and Yao Guo and Xiangqun Chen},
+ title = {Cloud-based Programmable Sensor Data Provision},
+ booktitle = {The 3rd IEEE International Conference on Mobile Cloud Computing, Services and Engineering},
+ series = {MobileCloud'15},
+ year = {2015},
+ location = {San Francisco, CA},
+ pages = {},
+}

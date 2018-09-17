@@ -1,0 +1,12 @@
+@INPROCEEDINGS{8009207, 
+author={C. Wang and Y. Guo and P. Shen and X. Chen}, 
+booktitle={2017 IEEE/ACM International Symposium on Low Power Electronics and Design (ISLPED)}, 
+title={E-Spector: Online energy inspection for Android applications}, 
+year={2017}, 
+volume={}, 
+number={}, 
+pages={1-6}, 
+keywords={Android (operating system);energy consumption;mobile computing;power aware computing;Android applications;e-spector;energy consumption;energy curve;energy estimation error;energy hotspot;energy monitoring;energy testing;mobile apps;online energy inspection;Androids;Energy consumption;Hardware;Instruments;Smart phones;Testing;Tools;Android;Energy testing;mobile applications;static analysis}, 
+doi={10.1109/ISLPED.2017.8009207}, 
+ISSN={}, 
+month={July},}

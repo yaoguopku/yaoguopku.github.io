@@ -1,0 +1,10 @@
+@inproceedings{Zhang-SEKE-14,
+ author = {Lin Zhang and Yao Guo and Xiangqun Chen and Weizhong Shao and Lei Chen},
+ title = {Classifications of Topic Evolutions in Scientific Conferences},
+ booktitle = {The 26th International Conference on Software Engineering and Knowledge Engineering},
+ series = {SEKE'14},
+ year = {2014},
+ location = {Vancouver, Canada},
+ pages = {507--510},
+ numpages = {4},
+}

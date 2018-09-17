@@ -1,0 +1,12 @@
+@INPROCEEDINGS{8108297, 
+author={Y. Guo and M. Liu and X. Chen}, 
+booktitle={2017 IEEE 85th Vehicular Technology Conference (VTC Spring)}, 
+title={Looxy: Web Access Optimization for Mobile Applications with a Local Proxy}, 
+year={2017}, 
+volume={}, 
+number={}, 
+pages={1-5}, 
+keywords={Internet;cache storage;mobile computing;optimisation;smart phones;telecommunication traffic;Looxy;application response speed;local proxy;mobile application web accesses;mobile applications;mobile devices;mobile operating systems;optimizations;prefetching functionalities;prefetching mechanisms;smartphones;storage overhead;web access optimization;web caching;Browsers;Mobile communication;Prediction algorithms;Prefetching;Servers;Smart phones}, 
+doi={10.1109/VTCSpring.2017.8108297}, 
+ISSN={}, 
+month={June},}

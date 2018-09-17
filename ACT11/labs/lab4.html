@@ -1,0 +1,404 @@
+<html>
+<head>
+<title>Programming Assignment 4 -- CS 380C</title>
+<base href="http://www.cs.utexas.edu/users/mckinley/380C/index.html">
+
+<style type="text/css">
+.style1 {
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: large;
+				color: #330066;
+}
+.style2 {
+				color: #FF0000;
+}
+</style>
+
+</head>
+<body>
+<ul>
+	<br>
+	<hr>
+	<p></p>
+	<center class="style1">L<font size="5">ab 4: Register allocation for PowerPC processor
+	</font></center>
+
+
+	<hr>
+
+
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size="4" color="#330066"> Objective </font></font></b></p>
+	<p>The goal of this assignment is to implement the register
+	allocation algorithm for the PowerPC processor on Linux.</p>
+	<ol>
+		<li>Basic register allocation based on graph coloring or linear
+		scan algorithm. (100%)</li>
+		<li>Extra Credit: Rematerialization. (15%)</li>
+	</ol>
+
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size="4" color="#330066"> Project Description </font></font></b></p>
+	<p>You will implement a register allocation algorithm in your
+	compiler. As in prior assigments, your compiler will call csc
+	compiler on subset C files. Then, your register
+	allocator will take the 3-address format program as the
+	input, and perform register allocation for the PowerPC processor.
+	It will generate an intermediate format called RA3 code (register allocated
+	3-address format code) as the output. Then, you will translate the code
+	in RA3 from to PowerPC assembly code by calling a translator that we provide.
+	You need to test your code on PowerPC machine, and generate
+	an analysis report based on the results.</p>
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size="4" color="#330066"> Getting Started On Lab4 </font></font></b></p>
+	<p></p>
+	<ol>
+		<li>Download the c-subset compiler and example C files at <a
+			href="http://www.cs.utexas.edu/users/mckinley/380C/labs/cs380c_lab4.tgz">http://www.cs.utexas.edu/users/mckinley/380C/labs/cs380c_lab4.tgz</a></li>
+
+		<li>Decompress the file on the cs unix machines using
+<pre>
+	&quot;tar xvfz cs380c_lab4.tgz&quot;.
+</pre> 
+	This command will produce the following directory structure
+<pre>
+	cs380c_lab1
+		3addr_to_ppc
+		examples
+		lab4
+		src
+</pre> 
+		The source files of the 3-addr to PowerPC translator are in the
+		3addr_to_ppc directory. Here is an example call to the translator:<br>
+		
+		<tt><b>cd 3addr_to_ppc; run.sh -backend=ppc
+		<../example/s4.3addr.ra3</b></tt><br>
+		
+		The example files of the RA3 form code
+		are in the example directory. Among them, s4.c is the original C
+		source file, <tt><b>s4.3addr</b></tt> is the 3-addresss form code, <tt><b>s4.3addr.ra3</b></tt> is the
+		RA3 form code, and <tt><b>s4.s</b></tt> is the translated code for the PowerPC
+		machine.</li>
+
+		<li>Implement your own new register allocation component in the
+		lab4 directory. As usual, your compiler should accept 3-address code
+		as input from stdin, and write output to stdout. Your compiler
+		back end should generate the following output:
+		<ol type="a">
+			<li>RA3 format code with the specified number of registers
+			registers.</li>
+			<li>An optimization report</li>
+		</ol>
+
+		Your compiler will be invoked by the script 'run.sh', and should
+		accept the following command line arguments.
+		<ol>
+			<li><tt><b>-opt</b></tt>, a comma separated list of transformations. The
+			transformations you will support are:
+			<ul>
+				<li><tt><b>rga,x</b></tt>: perform basic register allocation with x
+				available registers, where <tt><b>x</b></tt> is a number in the set: (4, 6, 8, 10,
+				12, 14, 16).</li>
+				<li><tt><b>rem</b></tt>: specifies perform rematerialization.</li>
+			</ul>
+			For example:
+			<ul>
+				<li><tt><b>-opt=rga,16</b></tt> means perform basic register allocation
+				with 16 registers</li>
+				<li><tt><b>-opt=rga,16,rem</b></tt> means perform basic register
+				allocation and rematerialization with <tt><b>16</b></tt> available registers</li>
+			</ul>
+			</li>
+			<li><tt><b>-backend</b></tt> specifies which backend to use: <tt><b>ra3</b></tt> or <tt><b>rep</b></tt>.</li>
+		</ol>
+		</li>
+	</ol>
+
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size="4" color="#330066"> Implementation Specification </font></font></b></p>
+	<p>Perform register allocation from the source of your choice. You will
+	generate the RA3 format code, which is an extension of the 3-address
+	format.</p>
+	<ol>
+		<li><b>RA3: Register allocated 3-address format</b><br></br>
+		RA3 formatis very similar to 3-address. We list the differences
+		below.
+		<ol type="a">
+			<li>A new operand type, register, is defined in the RA3 format.
+			It ends with &quot;~&quot;. For example, &quot;r20~&quot; is a legal
+			register operand. r20~ specifies that the operand is in register 20.
+			(See the PPC register table below for valid register names.)
+			When storing the result of an instruction to a register, generate
+			the register operand at the beginning of the instruction as follows:<br>
+			<ul>
+				&quot;r23~instr 15: mul r20~ 10.&quot; <br>
+				This instruction has two
+				operands, the 1st is the register r20, the 2nd is a constant, the
+				result is stored in register r23.
+			</ul>
+			</li>
+			<li>The following instructions access the global variable.<br>
+			A: Load global variable: 
+<pre>
+	instr 6: add res_base#32756 GP
+	r19~instr 7: load res_base#32756
+</pre>
+			You
+			only need to allocate one register for the results of the 2nd
+			instruction. Please notice the format of the 2nd instruction is
+			different from the 3-address format.
+<pre></pre>
+			B: Store global variable:
+<pre>
+	instr 4: add res_base#32756 GP
+	instr 5: store 18  res_base#32756
+</pre> 
+			This instruction stores a constant 18 in a global variable with the address 32756.
+<pre></pre>
+
+			If a register is stored, the instructions are:
+<pre>
+	instr 4: add res_base#32756 GP
+	instr 5: store r18~  res_base#32756
+</pre>
+			This instruction stores the contents of register r18 in a global variable with the address 32756.
+<pre></pre>
+			</li>
+			<li>The local variables, such as x#-4, y#-8, are on the stack
+			after any function is called. Operands in this format will access
+			memory, rather than using registers.</li>
+			<li>Only load/store instructions can access local variables
+			directly.</li>
+			<li>All other instructions must have register or constant
+			operands. The only exception is the address for the global variables: the
+			add instruction, that is computing the address, accesses the GP and offset directly.</li>
+			<li>The WriteLong() function can print the value of register
+			operand. It adds a <b><tt>\n</b></tt> at the end. You must not call
+			WriteLine() any more.</li>
+			<li>The max number of the parameters for each function is 8.</li>
+			<li><b>Array and Structure are not supported.</b></li>
+		</ol>
+
+		<p>The example of a 3-address format code and its RA3 format code
+		are listed  below:</p><br>
+		C source code:
+<pre>
+	long res;
+	void main()
+	{
+	    long x, y, z;
+	    res = 8;
+	    x =res;
+	    x =0;
+	    y =1;
+	    z =2;
+	 
+	    y = x *10;
+	    z = y + 1000;
+	    if (z<=2000) {
+	                    z = z + 5;
+	    }
+	    res = z;
+	    WriteLong(z);
+	    //printf("%d \n", z);
+	}
+</pre>
+		 3-address format code:
+<pre>
+	instr 1: nop
+	instr 2: entrypc
+	instr 3: enter 12
+	instr 4: add res_base#32764 GP
+	instr 5: store 8 (4)
+	instr 6: add res_base#32764 GP
+	instr 7: load (6)
+	instr 8: move (7) x#-4
+	instr 9: move 0 x#-4
+	instr 10: move 1 y#-8
+	instr 11: move 2 z#-12
+	instr 12: mul x#-4 10
+	instr 13: move (12) y#-8
+	instr 14: add y#-8 1000
+	instr 15: move (14) z#-12
+	instr 16: cmple z#-12 2000
+	instr 17: blbc (16) [20]
+	instr 18: add z#-12 5
+	instr 19: move (18) z#-12
+	instr 20: add res_base#32764 GP
+	instr 21: store z#-12 (20)
+	instr 22: write z#-12
+	instr 23: ret 0
+	instr 24: nop
+</pre>
+		RA3 format code:
+<pre>
+	instr 1: nop
+	instr 2: entrypc
+	instr 3: enter 12
+	instr 4: add res_base#32764 GP
+	instr 5: store 8  res_base#32764
+	instr 6: add res_base#32764 GP
+	r19~instr 7: load res_base#32764
+	instr 8: store r19~ x#-4
+	instr 9: store 0 x#-4
+	instr 10: store 1 y#-8
+	instr 11: store 2 z#-12
+	r20~instr 12: load x#-4
+	r21~instr 13: load y#-8
+	r22~instr 14: load z#-12
+	r23~instr 15: mul r20~ 10
+	instr 16: move r23~ r21~
+	r24~instr 17: add r21~ 1000
+	instr 19: move r24~ r22~
+	instr 20: store r21~ y#-8
+	instr 21: store r22~ z#-12
+	instr 23: cmplt r22~ 2000
+	instr 24: blbc (23) [27]
+	r22~instr 25: add r22~ 5
+	instr 26: store r22~ z#-12
+	instr 27: add res_base#32764 GP
+	instr 28: store r22~  res_base#32764
+	instr 29: write r22~
+	instr 30: ret 0
+	instr 31: nop
+</pre></li>
+
+		<li><b>Usage Constraints for the PPC registers</b><br>
+		The PowerPC architecture provides 32 general purpose registers, each
+		32 bits wide. Here are general purpose registers and their usage.
+
+		<hr />
+		<table>
+			<tr>
+				<th>Register Name</th>
+				<th>Usage</th>
+			</tr>
+			<tr>
+				<td>r0</td>
+				<td>Volatile register which may be modified during function
+				linkage</td>
+			</tr>
+			<tr>
+				<td>r1</td>
+				<td>Stack frame pointer, always valid</td>
+			</tr>
+			<tr>
+				<td>r2</td>
+				<td>System-reserved register</td>
+			</tr>
+			<tr>
+				<td>r3-r4</td>
+				<td>Volatile registers used for parameter passing and return
+				values</td>
+			</tr>
+			<tr>
+				<td>r5-r10</td>
+				<td>Volatile registers used for parameter passing</td>
+			</tr>
+			<tr>
+				<td>r11-r12</td>
+				<td>Volatile registers which may be modified during function
+				linkage</td>
+			</tr>
+			<tr>
+				<td>r13</td>
+				<td>Small data area pointer register</td>
+			</tr>
+			<tr>
+				<td>r14-r30</td>
+				<td>Registers used for local variables
+				<b>Only these numbers are available to your register allocator.</b>
+				</td>
+			</tr>
+			<tr>
+				<td>r31</td>
+				<td>Used for local variables or &quot;environment
+				pointers&quot;</td>
+			</tr>
+			<tr>
+				<td>CR0-CR7</td>
+				<td>Condition Register Fields, each 4 bits wide</td>
+			</tr>
+			<tr>
+				<td>LR</td>
+				<td>Link Register</td>
+			</tr>
+		</table>
+		<hr />
+
+		Since we provide the translation from RA3 format into PPC, you will
+		not implement the ABI component (i.e., the calling convention that
+		saves and restores registers on a procedure call and return). However,
+		you need to notice:
+		<ol type="a">
+			<li>Only registers r14-r30 are available for local variables that you will allocate.</li>
+			<li>r1 is the stack frame pointer.</li>
+			<li>All data is 32 bits.</li>
+		</ol>
+		</li>
+
+		<li><b>Report format</b><br>
+		You will run your code on a CS linux machine, and generate the ra3
+		code. when "-backend=rep" is speficied, please generate the report in
+		the form as below, note, the number of resisters is specified by "-opt
+		=rga"
+		<p></p>
+		C File: testcase1.c <pre>
+&lt;Graph coloring/Linear scan&gt; 
+Register number: 4, Number of Spills: 20
+</pre> Then, You will translate the ra3 code into ppc assembly code by calling
+		the translator provided on a CS Linux machine. You will test your
+		assebmly code on a PPC machine (we will send you account information
+		shortly). You will report the compilation and execution time. Please
+		report the execution time with variant number of registers as below,
+		note, you need to generate this report manually, and write it into a
+		file, named testcase1.ppc.rep.
+
+		<p></p>
+		C File: testcase1.c <pre>
+&lt;Graph coloring/Linear scan&gt; Compile time: .15s
+Register number: 4, Execution time: 0.12s
+Register number: 6, Execution time: 0.08s
+Register number: 8, Execution time: 0.04s
+... ...
+Register number: 16, Execution time: 0.02s
+</pre></li>
+	</ol>
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size="4" color="#330066"> Turning In Your Assignment </font></font></b></p>
+	<p>Your assignment should contain the following.</p>
+	<ol>
+		<li>A single tgz file named lab4-group<span class="style2">X</span>.tgz 
+		(X should be replaced by your group number), which, when extracted,
+		creates the lab4 directory.</li>
+		<li>The lab4 directory can contain sub-directories.</li>
+		<li>The lab4 directory should contain the following files:
+		<ol type="a">
+			<li>README - Please include your name(s) and student ID(s) here.</li>
+			<li>compile.sh - a script to compile your source code.</li>
+			<li>run.sh - a script that runs your compiler. This script
+			should read 3-address code as input from stdin and write output to
+			stdout. The output is specified by the command line arguments
+			described in the previous section.</li>
+		</ol>
+		</li>
+	</ol>
+
+	<p>Turn in your assignment by emailing the final lab4-groupX.tgz to the 
+	instructor.</p>
+<pre>
+ </pre>
+</ul>
+
+<b><font face="Verdana, Arial, Helvetica, sans-serif"><font size=4
+color="#330066">    
+Thanks & Acknowledgements
+</font></font></b>
+
+<p> These assignments are derived from
+<a href="http://www.cs.utexas.edu/users/mckinley/">Prof. Kathryn McKinley</a>'s
+<a href="http://www.cs.utexas.edu/users/mckinley/380C/labs/labs.html">Advanced 
+Compiler Techniques</a> class.<p>
+
+</body>
+</html>

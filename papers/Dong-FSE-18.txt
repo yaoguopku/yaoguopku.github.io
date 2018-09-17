@@ -1,0 +1,12 @@
+@INPROCEEDINGS{Dong-FSE-18, 
+author={Feng Dong and Haoyu Wang and Li Li and Yao Guo and Tegawend¨¦ F. Bissyand¨¦ and Tianming Liu and Guoai Xu and Jacques Klein}, 
+booktitle={FSE 2018}, 
+title={FraudDroid: Automated Ad Fraud Detection for Android Apps}, 
+year={2018}, 
+volume={}, 
+number={}, 
+pages={}, 
+doi={}, 
+ISSN={}, 
+month={Nov},
+}

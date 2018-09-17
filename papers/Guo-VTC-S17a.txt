@@ -1,0 +1,12 @@
+@INPROCEEDINGS{8108350, 
+author={Y. Guo and W. Wang and X. Chen}, 
+booktitle={2017 IEEE 85th Vehicular Technology Conference (VTC Spring)}, 
+title={FreeNavi: Landmark-Based Mapless Indoor Navigation Based on WiFi Fingerprints}, 
+year={2017}, 
+volume={}, 
+number={}, 
+pages={1-5}, 
+keywords={indoor navigation;radionavigation;wireless LAN;FreeNavi;WiFi fingerprints;WiFi signals;floor plans;indoor environments;indoor localization;landmark collection;landmark-based mapless indoor navigation algorithm;sensors;virtual map;walking trace collection;Fingerprint recognition;Floors;Heuristic algorithms;Indoor navigation;Legged locomotion;Wireless fidelity}, 
+doi={10.1109/VTCSpring.2017.8108350}, 
+ISSN={}, 
+month={June},}

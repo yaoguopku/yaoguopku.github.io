@@ -1,0 +1,11 @@
+@inproceedings{Wang-ISSTA-15,
+ author = {Wang, Haoyu and Guo, Yao and Ma, Ziang and Chen, Xiangqun},
+ title = {WuKong: A Scalable and Accurate Two-Phase Approach to Android App Clone Detection},
+ booktitle = {Proceedings of the ACM International Symposium on Software Testing and Analysis},
+ series = {ISSTA '15},
+ year = {2015},
+ location = {Balimore, MD},
+ pages = {71--82},
+ numpages = {12},
+ publisher = {ACM},
+}

@@ -1,0 +1,85 @@
+"WuKong: A Scalable and Accurate Two-Phase Approach to Android App Clone Detection",
+"Uniport: A Uniform Programming Support Framework for Mobile Cloud Computing",
+"Cloud-based Programmable Sensor Data Provision"
+"Context-Aware Usage Control for Web of Things",
+"Collaborative privacy management: mobile privacy beyond your own devices".
+"An Empirical Study of Indoor Localization Algorithms with Densely Deployed APs",
+"Experiences in Profile-Guided Operating System Kernel Optimization",
+"Protecting Location-related Privacy Collaboratively in Geo-Social Networks",
+"Classifications of Topic Evolutions in Scientific Conferences",
+"Similarity-based Web Browser Optimization",
+"Detecting repackaged Android applications based on code clone detection technique".
+"Power Estimation for Mobile Applications with Profile Driven Battery Traces".
+"Mobile Web Browser Optimizations in the Cloud Era: A Survey",
+"Patronus: Augmented Privacy Protection for Resource Publication in On-line Social Networks",
+"Network-Oriented Operating Systems: Status and Challenges".
+"An Approach to Building Systems and Applications of Internet of Things with Smart Things".
+¡°Supporting Localized Interactions among Heterogeneous Smart Things with ThingWare¡±,
+"Towards an Operating System for the Campus",
+"A Context Retrieval Cost Model and its Application on Smartphones",
+"Model Oriented Attestation on Dynamically Reconfigurable Component-Based Systems",
+"Boreas: an Accurate and Scalable Token-based approach to code clone detection",
+"Smarter Wheelchairs Who Can Talk to Each Other: An Integrated and Collaborative Approach",
+"A Splitting-based Cloud Storage Mechanism for Digital Images",
+"Energy Efficient Hardware Data Prefetching",
+"Jupiter: Transparent Augmentation of Smartphone Capabilities through Cloud Computing",
+"CMCD: Count Matrix based Clone Detection",
+"Energy-Aware Fixed-Priority Multi-core Scheduling for Real-Time Systems",
+¡°MiWoT: An Application-Oriented Programming Supporting Framework for Web of Things¡±,
+"A System Context-Aware Approach for Battery Lifetime Prediction in Smart Phones",
+"Research Progress on Software Energy Optimization Techniques",
+"SCOBA: Source Code Based Attestation on Custom Software",
+"Modeling TCG-based Secure systems with Colored Petri Nets",
+"Security Model Oriented Attestation on Dynamically Reconfigurable Component-Based System",
+"Context-Aware Usage Control for Android",
+"A Runtime Software Trustworthiness Evidence Collection Mechanism based on TPM",
+"Research Progress on Green Software Technologies",
+"Energy-Efficient Software"(Chinese Translation),
+"Data Sharing and Access Control for Mobile Social Networks",
+"Practical Property-based Attestation on Free Software" (Poster),
+"Remote Attestation on Function Execution",
+"FPValidator: Validating Type Equivalence of Function Pointers On The Fly",
+"A User-Customable Service Model Based on Mobile Platform",
+"Transaction-based Adaptive Dynamic Voltage Scaling for Interactive Applications",
+"Semantic Attestation of Software Configuration",
+"A lightweight Monitoring framework for Embedded systems",
+"A Windows Rootkit Detection Method Based on Cross-View",
+"Data Memory Subsystem Resilient to Process Variations",
+"DPAC: A Reuse-Oriented Password Authentication Framework for Improving Password Security",
+"Automated Aspect Recommendation through Clustering-Based Fan-in Analysis",
+"Fine-Grained Energy Estimation and Optimization of Embedded Operating Systems",
+"Synchronization Coherence: A Transparent Hardware Mechanism for Cache Coherence and Fine-Grained Synchronization",
+"AspectC2C: a Symmetric Aspect Extension to the C Language",
+"A Survey on Operating System Power Management",
+"Keep Passwords Away from Memory: Password Caching and Verification Using TPM",
+"Estimation and Analysis of Embedded Operating System Energy Consumption",
+Toward Efficient Aspect Mining for Linux", 
+"Fault-Tolerant Nanoscale Processors on Semiconductor Nanowire Grids",
+ "Designing Memory Subsystems Resilient to Process Variations",
+  "Combining Circuit Level and System Level Techniques for Defect-Tolerant Nanoscale Architectures", 
+  "Self-Healing Wire-Streaming Processors on 2-D Semiconductor Nanowire Fabrics",
+"Compiler-Based Adaptive Fetch Throttling for Energy Efficiency", 
+"PARE: A Power-Aware Data Prefetching Engine",
+ "Energy-Aware Data Prefetching for General-Purpose Programs",
+ "Wire-Streaming Processors on 2-D Nanowire Fabrics",
+ "Runtime Biased Pointer Analysis and Its Application on Energy Efficiency", 
+ "Energy Characterization of Hardware-Based Data Prefetching," 
+  "Experiences in Building c++ Front End".
+   "Reengineering: Concepts and Frameworks",
+   "An Introduction to NATO Software Reuse Standards,"
+    "The Research and Development of Reverse Engineering",
+    "Compiler-Assisted Hardware Data Prefetching for Next-Generation Processors", 
+     "JBRET: an Object-Oriented Reverse Engineering Tool",
+
+Yao Guo, "SOA: Principles of Service Design", Chinese Translation, Posts & Telecommunications Press, Jun 2009. (Original Author: Thomas Erl, ISBN 978-0132344821, Prentice Hall 2007)
+Yao Guo et al., "Pragmatic Software Testing: Becoming an Effective and Efficient Test Professional", Chinese Translation, Tsinghua University Press, Dec 2008. (Original author: Rex Black, ISBN 9780470127902, Wiley 2007.)
+Yao Guo et al., "Software Testing: Testing Across the Entire Software Development Life Cycle", Chinese Translation, Tsinghua University Press, Sep 2008. (Original authors: Gerald D. Everett, Raymond McLeod, Jr., ISBN 978-0-471-79371-7, Wiley 2007.)
+Qi Li, Yao Guo, "Google Web Toolkit: GWT Java AJAX Programming", Posts & Telecommunications Press, 2009. (Original Author: Prabhakar Chaganti, ISBN 978-1-847191-00-7, Packt 2007.)
+Qi Li, Yao Guo, "A Practical Guide to Enterprise Architecture", Chinese Translation, Tsinghua University Press, ISBN 7-302-11401-3, 2005. (Original authors: James McGovern et al, Prentice Hall 2003.)
+Workshops and Others
+Huaping Wang, Yao Guo, Israel Koren, C. Mani Krishna, "Compiler-Based Adaptive Fetch Throttling for Energy Efficiency", 4th Annual Boston Area Architecture Workshop (BARC-2006), Jan 2006.
+Yao Guo, Saurabh Chheda, Israel Koren, C. Mani Krishna, Csaba Andras Moritz, "Energy-Aware Data Prefetching for General-Purpose Programs", Proc. of PACS'04 Workshop on Power-Aware Computer Systems, Micro-37, Portland, OR, Dec. 2004.
+Yao Guo, Saurabh Chheda, Israel Koren, C. Mani Krishna, Csaba Andras Moritz, "Energy Characterization of Hardware Data Prefetching", Boston Area Architecture Workshop (BARC-2004), Jan 2004.
+Yao Guo, Saurabh Chheda, and Csaba Andras Moritz, "Runtime Biased Pointer Analysis and Its Application on Energy Efficiency", Proc. of PACS'03 Workshop on Power-Aware Computer Systems, Micro-36, San Diego, CA, Dec. 2003.
+Yao Guo, Saurabh Chheda, Csaba Andras Moritz, "Compiler-Enabled Cache Management for Pointer-Intensive Programs", Boston Area Architecture Workshop (BARC-2003), Jan 2003.
+Yao Guo, "Slicing Object-Oriented Programs: Mechanism, Implementation, and Applications", Technical Report, OGI @ OHSU, Apr 2002.

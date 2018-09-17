@@ -1,0 +1,306 @@
+
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+<title>Advanced Compiler Techniques</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+<!--
+div.Section1
+	{page:Section1;}
+.style1 {
+				color: #FF0000;
+}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFCC">
+
+<p align="center"><b><font face="Times New Roman" size="6">Advanced Compiler 
+Techniques (Fall 2011)</font></b><font face="Times New Roman"><b><font size="6"><br>
+&nbsp;</font></b></font></p>
+<p align="center"><font face="Times New Roman"><a href="#meeting">Class Meetings</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#me">Instructors</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#outline">Course 
+</a></font><font face="Times New Roman"><a href="#outline">Syllabus</a>&nbsp;&nbsp;&nbsp; &nbsp;
+<a href="#notes">Course Project</a>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<a href="#grading">Grading</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#links">Links</a></font></p>
+<hr size="1" color="#C0C0C0">
+<p><b><font face="Times New Roman"><a name="News_&amp;_Notifications:_">NEWS &amp; 
+NOTIFICATIONS:</a></font></b></p>
+<ul>
+	<li>[2011/12/22] Final Project Presentation. [<a href="labs/project-groups2.htm">Group 
+	Order</a>]</li>
+	<li>[2011/11/10] <span class="style1"><strong>Midterm date: 2011/11/24</strong> 
+	(in-class, open-book, open-notes)</span></li>
+	<li>[2011/11/03] Homework#3 due today. Project 
+	Proposals due today. Proposal Presentation in Class! 
+	<ul>
+					<li>Project Proposal
+					<a href="labs/project-groups.htm">Presentation Order</a>.</li>
+	</ul>
+	</li>
+</ul>
+<hr size="1" color="#C0C0C0">
+<p><b><font face="Times New Roman"><a name="meeting"></a>CLASS MEETINGS</font></b></p>
+<ul>
+	<li><b><font face="Times New Roman" color="#FF0000">Time:&nbsp; 10-12 Thursdays 
+	(Class starts at 6:40pm)</font></b></li>
+	<li><font face="Times New Roman" color="#FF0000"><b>Location:&nbsp; 2-4</b>13</font></li>
+</ul>
+<p><b><font face="Times New Roman">Tentative Schedule (subject to change):</font></b></p>
+<table border="1" id="table3" style="position: relative; left: 12; margin-bottom: 4; top: 0px; width: 796px; height: 508px;">
+	<tr>
+		<td align="center" width="72"><b>Date</b></td>
+				<td align="center" style="width: 393px"><b>Topic</b></td>
+				<td align="center" style="width: 167px"><b>Homework</b></td>
+				<td align="center" style="width: 267px"><b>Project Schedule</b></td>
+				<td align="center" style="width: 261px"><strong>Reading List</strong></td>
+				</tr>
+	<tr>
+		<td align="center" width="72">9/8</td>
+				<td align="left" style="width: 393px">Course 
+				Introduction/Compiler Review (<a href="slides/lect1-intro.ppt">Slides</a>)</td>
+				<td align="center" style="width: 167px">&nbsp;</td>
+				<td align="center" style="width: 267px">&nbsp;</td>
+				<td align="center" style="width: 261px">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">9/15</td>
+				<td align="left" style="width: 393px"><b>[Dragon S8.4-8.5, S8.7, 
+				S9.2] </b>Introduction to Optimization (<a href="slides/lect2-opt.ppt">Slides</a>), </td>
+				<td align="center" style="width: 167px">&nbsp;</td>
+				<td align="center" style="width: 267px">&nbsp;</td>
+				<td align="center" style="width: 261px">[<a href="#readings">Backus&#39;57</a>]&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">9/22</td>
+				<td align="left" style="width: 393px"><b>[Dragon S9.2] Data Flow 
+				Analysis(<a href="slides/lect3-DFA.ppt">Slides</a>) </b></td>
+				<td align="center" style="width: 167px"><a href="HW/HW-1.pdf">HW#1</a>
+				<a href="HW/HW-1-sol.pdf">Solutions</a></td>
+				<td align="center" style="width: 267px">&nbsp;</td>
+				<td align="center" style="width: 261px">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" height="24" width="72">9/29</td>
+				<td align="left" height="24" style="width: 393px"><b>[Dragon S9.3] </b>DFA 
+				Foundations (<a href="slides/lect4-DFA-fnd.ppt">Slides</a>)</td>
+				<td align="center" height="24" style="width: 167px">&nbsp;</td>
+				<td align="center" height="24" style="width: 267px"><a href="project.htm">
+				Project Introduction</a> </td>
+				<td align="center" height="24" style="width: 261px">[]</td>
+				</tr>
+	<tr>
+		<td align="center" width="72" class="style1"><strong>10/6</strong></td>
+				<td align="left" style="width: 393px"><font color="#FF0000">No 
+				Class (Holiday)</font></td>
+				<td align="center" style="width: 167px">&nbsp;</td>
+				<td align="center" style="width: 267px">&nbsp;</td>
+				<td align="center" style="width: 261px">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">10/13</td>
+				<td align="left" style="width: 393px">DFA Foundations (continue)</td>
+				<td align="center" style="width: 167px"><a href="HW/HW-2.pdf">HW#2</a>
+				<a href="HW/HW-2-sol.pdf">Solutions</a></td>
+				<td align="center" style="width: 267px">&nbsp;</td>
+				<td align="center" style="width: 261px">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">10/20</td>
+				<td align="left" style="width: 393px"><b>[Dragon S9.3-9.5] </b>
+				Partial Redundancy Elimination (<a href="slides/lect5-PRE.ppt">Slides</a>)</td>
+				<td align="center" style="width: 167px"><a href="HW/HW-3.pdf">HW#3</a>
+				<a href="HW/HW-3-sol.pdf">Solutions</a></td>
+				<td align="center" style="width: 267px">Project Proposal due </td>
+				<td align="center" style="width: 261px">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72" height="24">10/27</td>
+				<td align="left" height="24" style="width: 393px">No Class 
+				(Instructor Out of Town)</td>
+				<td align="center" height="24" style="width: 167px">&nbsp;</td>
+				<td align="center" height="24" style="width: 267px">&nbsp;</td>
+				<td align="center" height="24" style="width: 261px">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">11/3</td>
+				<td align="left" height="24" style="width: 393px"><b>[Dragon S9.6-9.7] </b>
+				Loops (<a href="slides/lect6-loop.ppt">Slides</a>)<br>
+				Project Proposal Presentation </td>
+				<td align="center" style="width: 167px"><a href="HW/HW-4.pdf">
+				HW#4</a> <a href="HW/HW-4-sol.pdf">Solutions</a></td>
+				<td align="center" style="width: 267px">&nbsp;</td>
+				<td align="center" style="width: 261px">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">11/10</td>
+				<td align="left" height="26" style="width: 393px"><b>[Tiger S9.1-9.3,&nbsp;
+				<a href="#readings">Extra Readings</a> Cytron&#39;91, 
+				Kennedy&#39;99 (Chow&#39;97 )] </b>SSA &amp; its Applications (<a href="slides/lect7-ssa.ppt">Slides</a>)</td>
+				<td align="center" style="width: 167px"><a href="HW/HW-5.pdf">HW#5</a>&nbsp;
+				<a href="HW/HW-5-sol.pdf">Solutions</a></td>
+				<td align="center" style="width: 267px">&nbsp;</td>
+				<td align="center" style="width: 261px">[<a href="#readings">Cytron&#39;91</a>]</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">11/17</td>
+				<td align="left" style="width: 393px">Interprocedural Analysis (<a href="slides/lect8-inter.ppt">Slides</a>), 
+				Midterm <b><a href="midterm-review.htm">Review</a>&nbsp; 
+				(<a href="sample-midterm.pdf">Sample Midterm</a>, 
+				<a href="sample-midterm-sol.pdf">Solution</a>)</b></td>
+				<td align="center" style="width: 167px">&nbsp;</td>
+				<td align="center" style="width: 267px">&nbsp;</td>
+				<td align="center" style="width: 261px">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72" height="24">11/24</td>
+				<td align="left" style="width: 393px"><b><font color="#FF0000">Midterm Exam</font></b></td>
+				<td align="center" height="24" style="width: 167px">&nbsp;</td>
+				<td align="center" height="24" style="width: 267px">Progress Report due</td>
+				<td align="center" height="24" style="width: 261px">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">12/1</td>
+				<td align="left" height="24" style="width: 393px">Pointer Analysis (<a href="slides/lect9-pointer.ppt">Slides</a>)</td>
+				<td align="center" style="width: 167px">&nbsp;</td>
+				<td align="center" style="width: 267px">&nbsp;</td>
+				<td align="center" style="width: 261px">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72" style="height: 37px">12/8</td>
+				<td align="left" style="width: 393px">Guest Lecture by Prof. 
+				Yifeng Chen: Program optimization for 
+				GPU</td>
+				<td align="center" style="height: 37px; width: 167px;"></td>
+				<td align="center" style="height: 37px; width: 267px;"></td>
+				<td align="center" style="height: 37px; width: 261px;">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">12/15</td>
+				<td align="left" style="height: 37px; width: 393px">Parallelism 
+				and Locality (<a href="slides/lect10-locality.ppt">Slides</a>)</td>
+				<td align="center" style="width: 167px">&nbsp;</td>
+				<td align="center" style="width: 267px">&nbsp;</td>
+				<td align="center" style="width: 261px">&nbsp;</td>
+				</tr>
+	<tr>
+		<td align="center" width="72">12/22</td>
+				<td align="left" style="width: 393px"><font color="#FF0000">Final Project Presentation</font></td>
+				<td align="center" style="width: 167px">&nbsp;</td>
+				<td align="center" style="width: 267px">Final Report due </td>
+				<td align="center" style="width: 261px">&nbsp;</td>
+				</tr>
+	</table>
+<hr size="1" color="#C0C0C0">
+<p><font face="Times New Roman"><b><a name="me"></a>INSTRUCTORS </b></font></p>
+<p><font face="Times New Roman"><b><a href="http://sei.pku.edu.cn/~yaoguo">Yao Guo</a></b><br>
+1428 Science Building<br>
+Telephone: 6275-3496<br>
+Email: yaoguo &#39;at&#39; sei.pku.edu.cn</font></p>
+<p><font face="Times New Roman">Office Hours: 4-5:30 Tuesdays, or by appointment (Email preferred).</font></p>
+<p><font face="Times New Roman"><b>TA</b>: TBD</font></p>
+<hr size="1" color="#C0C0C0">
+<p><b><font face="Times New Roman"><a name="outline"></a>COURSE SYLLABUS</font></b></p>
+<p><font face="Times New Roman">Built upon basic compiler knowledge, this course 
+covers advanced materials on compiler principles and techniques, including 
+data-flow analysis, basic compiler optimizations, SSA, pointer analysis, 
+localization and parallelization optimization, and recent progresses on program 
+analysis &amp; optimization. Students are required to work on a project to implement a new analysis or optimization, or use 
+materials learned in class to solve a practical problem.</font></p>
+<p><font face="Times New Roman"><b>Prerequisite</b>: undergraduate course on 
+compiler principles or techniques.</font></p>
+<p><b><font face="Times New Roman">Topics Covered:</font></b></p>
+<ol>
+	<li><font face="Times New Roman"><b>Compiler techniques review</b>: lexical 
+	&amp; syntax analysis, intermediate representation (AST), etc.</font></li>
+	<li><font face="Times New Roman"><b>Introduction</b> to compiler analysis &amp; 
+	optimization.</font></li>
+	<li><font face="Times New Roman"><b>Data flow analysis:</b> basic concepts 
+	(basic blocks, CFG, DFG, Def-Use Set), mathematic foundation (semi-lattice, formal representation), etc.</font></li>
+	<li><font face="Times New Roman"><b>Basic compiler optimizations</b>: 
+	constant propagation, basic loop optimization, partial redundancy 
+	elimination, SSA (static single assignment) and its application.</font></li>
+	<li><font face="Times New Roman"><b>Pointer analysis</b>: introduction, 
+	flow-insensitive analysis, context-sensitive/insensitive analysis, speed 
+	optimization, recent progress.</font></li>
+	<li><font face="Times New Roman"><b>Localization &amp; parallelization</b>: 
+	program localization optimization, parallelization optimization, 
+	optimization for multi-core/many-core.</font></li>
+	<li><font face="Times New Roman"><b>Advance topics</b>: (based on students&#39; 
+	interests) register allocation, dynamic compilation, garbage collection, 
+	etc.</font></li>
+</ol>
+<p><b><font face="Times New Roman">Recommended Text:</font></b></p>
+<ol>
+	<li><font face="Times New Roman">(Dragon Book) Aho, Lam, Sethi, &amp; Ullman, <b>Compilers: 
+	Principles, Techniques, &amp; Tools (Second Edition)</b>, Addison-Wesley, 2007. 
+	</font></li>
+</ol>
+<p><b><font face="Times New Roman">Reference Text:</font></b></p>
+<ol>
+	<li><font face="Times New Roman">(Whale Book) </font>Steven Muchnick,
+	<font face="Times New Roman"><b>Advanced Compiler Design and Implementation,</b></font><em style="color: red">
+	</em>Morgan Kaufman Publishers, 1997 </li>
+	<li><font face="Times New Roman">(Tiger Book)</font><span class="b24-bookauthor">Andrew 
+	W. Appel&nbsp;and&nbsp;Jens Palsberg</span>,<font face="Times New Roman"><b> Compiler 
+	Implementation in Java (2nd Ed.),</b> </font>Cambridge University Press, 
+	2002</li>
+	<li>(Ark Book) Keith D. Cooper, Linda Torczon,<font face="Times New Roman"><b> 
+	Engineering a Compiler, </b></font>Morgan Kaufman Publishers, 2003 </li>
+</ol>
+<p><b><font face="Times New Roman">Supplemental Readings:<a name="readings"></a></font></b></p>
+<ol>
+	<li>[Backus&#39;57]] [<span class="style1"><strong>Fortran Compiler</strong></span>] 
+	Backus, Beeber, Best, Goldberg, Haibt, Herrick, Nelson, Sayre, Sheridan, 
+	Stern, Ziller, Hughes, and Nutt,
+	<a href="http://archive.computerhistory.org/resources/text/Fortran/102663113.05.01.acc.pdf">
+	The Fortran Automatic Coding System,</a> Proceedings of the Western Joint 
+	Computer Conference, pp. 187-198, Los Angeles, CA, February, 1957. </li>
+	<li>[<font color="#FF0000"><b>Static Analysis</b>]</font>
+	<a href="http://www.brics.dk/~mis">Michael I. Schwartzbach</a>,
+	<a href="http://www.brics.dk/~mis/static.pdf">Lecture Notes on Static 
+	Analysis</a> (<a href="http://www.brics.dk/~mis/staticslides.pdf">slides</a>)</li>
+	<li><font face="Times New Roman">[Cytron&#39;91] [<b><font color="#FF0000">SSA</font></b>] Cytron, R., et al.,
+	<a href="materials/p451-cytron.pdf">Efficiently computing static single 
+	assignment form and the control dependence graph</a>. TOPLAS, 1991. 13(4): 
+	p. 451-490.</font></li>
+	<li><font face="Times New Roman">[Kennedy&#39;99] [<b><font color="#FF0000">SSA Application</font></b>] 
+	Kennedy et. al., </font><a href="materials/Kennedy99.pdf">Partial redundancy 
+	elimination in SSA form</a>, <font face="Times New Roman">in TOPLAS 1999.</font></li>
+	<li><font face="Times New Roman">[Chow&#39;97] [<font color="#FF0000">SSA extra</font>] Chow, F., et al.,
+	<a href="materials/p273-chow.pdf">A new algorithm for partial redundancy 
+	elimination based on SSA form</a>, in PLDI. 1997, ACM New York, NY, USA. p. 
+	273-286.</font></li>
+	<li><font face="Times New Roman">[<font color="#FF0000">SSA extra</font>] Brandis, M.M. and H. Mossenbock,
+	<a href="materials/p1684-brandis.pdf">Single-pass generation of static 
+	single-assignment form for structured languages</a>. TOPLAS, 1994. 16(6): p. 
+	1684-1698.</font></li>
+	<li><font face="Times New Roman">[<font color="#FF0000">SSA extra</font>] Knobe, K. and V. Sarkar,
+	<a href="materials/p107-knobe.pdf">Array SSA form and its use in 
+	parallelization</a>, in POPL. 1998, ACM New York, NY, USA. p. 107-120.</font></li>
+	<li></li>
+</ol>
+<hr size="1" color="#C0C0C0">
+<p><b><font face="Times New Roman"><a name="notes"></a>COURSE PROJECT</font></b></p>
+<p><font face="Times New Roman"><a href="project.htm">Detailed Project 
+Information.</a></font></p>
+<hr size="1" color="#C0C0C0">
+<p><font face="Times New Roman"><b><a name="grading"></a>COURSE GRADING</b></font></p>
+<p><font face="Times New Roman">Grading will be based on the following 
+components:</font></p>
+<ul>
+	<li><font face="Times New Roman">Homework: 20%.</font></li>
+	<li><font face="Times New Roman">Midterm: 30%</font></li>
+	<li><font face="Times New Roman">Final Project: 40%</font></li>
+	<li><font face="Times New Roman">Class Participation: 10%. </font></li>
+</ul><hr size="1" color="#C0C0C0">
+<p><font face="Times New Roman"><b><a name="links"></a>LINKS</b></font></p>
+<ul>
+	<li><font face="Times New Roman"><a href="books.htm">Book download</a>.</font></li>
+</ul>
+<hr size="1" color="#C0C0C0">
+<p><font face="Times New Roman">Last updated:
+<!--webbot bot="Timestamp" S-Type="EDITED" S-Format="%Y-%m-%d %H:%M:%S" startspan -->2011-12-22 18:02:17<!--webbot bot="Timestamp" i-checksum="25252" endspan --></font></p>

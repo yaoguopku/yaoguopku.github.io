@@ -1,0 +1,11 @@
+@ARTICLE{Wang-ScienceChina-14,
+  author =       {WANG HaoYu and WANG ZhongYu and GUO Yao and CHEN XiangQun},
+  title =        {Detecting repackaged Android applications based on code clone detection technique},
+  journal =      {SCIENCE CHINA Information Sciences},
+  year =         {2014},
+  volume =       {44},
+  number =       {1},
+  pages =        {142--157},
+  month =        {1},
+
+}

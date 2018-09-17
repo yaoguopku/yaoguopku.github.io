@@ -1,0 +1,235 @@
+<html>
+<head>
+<title>Programming Assignment 3 -- CS 380C</title>
+<base href="http://www.cs.utexas.edu/users/mckinley/380C/index.html">
+<style type="text/css">
+.style1 {
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: large;
+				color: #330066;
+}
+.style2 {
+				color: #FF0000;
+}
+</style>
+
+<body>
+<ul>
+	<br>
+	<hr>
+	<p>
+	<center class="style1">L<font size="5">ab 3: SSA and optimizations</font></center>
+
+
+	<hr>
+
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size=4 color="#330066"> Objective </font></font></b>
+	<p>The goal of this assignment is to build Static Single Assignment
+	(SSA) form, and perform optimizations on SSA. This assignment has the
+	following components:
+	<ol>
+		<li>Build Static Single Assignment (SSA) form. (25%)</li>
+		<li>Perform SSA based constant propagation. (30%)</li>
+		<li>Perform SSA based loop invariant code motion. (30%)</li>
+		<li>Translate SSA back to non-SSA 3-address code.
+		(15%)</li>
+		<li>Extra Credits: Perform global common subexpression
+		elimination. (15%)</li>
+	</ol>
+
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size=4 color="#330066"> Project Description </font></font></b>
+	<p>You will add this functionality to the optimizer and the
+	translator you have implemented for Lab 1 and 2. Your compiler will call the csc compiler
+	to compile the subset (SC) files. Your new optimizer will be able to
+	take the 3-address code as input, build
+	3-address SSA code, output 3-address SSA code, perform optimizations on
+	it, translate SSA back to non-SSA 3-address code, generating non-SSA optimized 3-address code.
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size=4 color="#330066"> Getting Started On Lab3 </font></font></b>
+	<p>
+	<ol>
+		<li>Download the lab files at <A
+			HREF="http://www.cs.utexas.edu/users/mckinley/380C/labs/cs380c_lab3.tgz">http://www.cs.utexas.edu/users/mckinley/380C/labs/cs380c_lab3.tgz</A></li>
+
+		<li>Decompress the file on the cs unix machines using
+<pre>
+	&quot;tar xvfz cs380c_lab3.tgz&quot;.
+</pre>
+This command will produce the following directory structure
+<pre>
+	cs380c_lab3
+		lab3
+</pre> 
+		There are only two script files and a README file in the lab3
+		directory. You should reuse all the examples files from lab2.</li>
+
+		<li>Implement your own new optimizer in the lab3 directory. As
+		usual, your compiler should accept 3-address code as input from stdin,
+		and write output to stdout. The backend of your compiler needs to generate the
+		following output:
+		<ol type="a">
+			<li>CFG</li>
+			<li>3-address code - The backend writes out the optimized
+			or unoptimized 3-address format, as you did previously.</li>
+			<li>3-address SSA code - The backend writes out 3-address SSA
+			code.</li>
+			<li>C - Same Lab 1</li>
+			<li>Optimization report</li>
+		</ol>
+
+		<p></p>
+		Your compiler will be invoked by the script 'run.sh', and should
+		accept the following command line arguments.
+		<ol type="a">
+			<li><tt><b>-opt</b></tt>, a comma separated list of transformations. The
+			transformations you will support are:
+			<ul>
+				<li><tt><b>scp</b></tt> (simple constant propagation)</li>
+				<li><tt><b>cse</b></tt> (common subexpression elimination)</li>
+				<li><tt><b>licm</b></tt> (loop invariant code motion)</li>
+				<li><tt><b>ssa</b></tt> (static single assignment)</li>
+			</ul>
+			For example:
+
+			<ul>
+				<li><tt><b>-opt=ssa,scp</b></tt> means convert to SSA form and perform
+				constant propagation.</li>
+				<li><tt><b>-opt=ssa,licm</b></tt> means convert to SSA form and then
+				perform constant propagation.</li>
+			</ul>
+			</li>
+			<li><tt><b>-backend</b></tt> determines which backend to use: <tt><b>c</b></tt>,
+			<tt><b>cfg</b></tt>, <tt><b>3addr</b></tt>, <tt><b>rep</b></tt>,
+			and <tt><b>ssa</b></tt>. If ssa is not specified, generate 3-address code without SSA
+			instructions. For example,<br> 
+			<tt><b>-backend=ssa,3addr</b></tt> means to generate 3-address format code in SSA
+			form.
+		</ol>
+		</li>
+
+	</ol>
+
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size=4 color="#330066"> Optimizer Implementation Specification
+	</font></font></b>
+	<p>
+	<ol>
+		<li><b>Build SSA form.</b> Implement the SSA algorithm discussed
+		in class. Use the opcode <tt><b>phi</b></tt> for phi functions. Name subscripted
+		variables as variable$subscript. For example, variable <tt><b>i</b></tt> will become
+		<tt><b>i$0</b></tt>, <tt><b>i$1</b></tt>, etc. Take a look at a simple example of a loop, and its
+		representation in 3-address and SSA formats.
+<pre>
+	i = 0;
+	while (i < 10) {
+		i = i + 1;
+	}
+</pre>
+3-address format:
+<pre>
+	instr 4: move 0 i#-8
+	instr 5: cmplt i#-8 10
+	instr 6: blbc (5) [10]
+	instr 7: add i#-8 1
+	instr 8: move (7) i#-8
+	instr 9: br [5]
+	instr 10: ret 0
+</pre> 
+		Thw 3-address format with SSA: (Note that SSA does not have offsets. You
+		have to keep track of offsets in your symbol table for memory
+		allocation.)
+<pre>
+	instr 4: move 0 i$0
+	instr 23: phi i$0 i$2
+	instr 24: move (23) i$1
+	instr 5: cmplt i$1 10
+	instr 6: blbc (5) [10]
+	instr 7: add i$1 1
+	instr 8: move (7) i$2
+	instr 9: br [23]
+	instr 10: ret 0
+</pre> 
+		Notice the new instructions <tt><b>instr 23</b></tt> and <tt><b>24</b></tt>.
+		Only variable <tt><b>i</b></tt> has a phi
+		instruction. Since virtual registers generated by our frontend csc are
+		all block-local (i.e., written to and read from within the same
+		basic-block), they do not require phi functions. In other words, all of them would be
+		dead. Therefore, do not insert phi functions for block-local virtual
+		variables or other variables with this property.
+		Perform an analysis (using live variables from Lab 2) that detects if the phi function is dead.  
+		For this assignment,
+		you do not have to add support to your frontend to read in 3-address
+		code in SSA form.</li>
+
+		<li><b>Perform SSA based Constant Propagation.</b> Perform
+		constant propagation on the CFG in SSA form. You must report the
+		number of constants you propagate. Produce an optimization report in
+		the following format:
+<pre> 
+	Function: 2
+	Number of constants propagated: 3
+	Function: 18
+	Number of constants propagated: 6
+</pre></li>
+
+		<li><b>Perform SSA based loop invariant code motion.</b> For each
+		statement in the program, if none of the operands points to a phi node
+		or a definition inside a loop, the result of this statement is loop
+		invariant. You should hoist that statement to the loop header.
+		Note that you can and should apply these criteria recursively. Produce
+		an optimization report in the following format:		
+<pre>
+	Function: 2
+	Number of statement hoisted: 3
+	Function: 9
+	Number of statement hoisted: 2
+</pre></li>
+
+		<li><b>Translate from SSA to non-SSA 3-address code.</b>
+		After performing the SSA based optimizations, you need to
+		translate from SSA format back to regular 3-address code, and
+		then, if specified, to C code.</li>
+
+		<li><b>Extra Credit:</b> Perform global common subexpression
+		elimination on the CFG in SSA form.</li>
+	</ol>
+
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size=4 color="#330066"> Turning In Your Assignment </font></font></b>
+	<p>Your assignment should contain the following.
+	<ol>
+		<li>A single tgz file named lab3-group<span class="style2">X</span>.tgz 
+		(X should be replaced by your group number), which, when extracted,
+		creates the lab3 directory.</li>
+		<li>The lab3 directory can contain sub-directories.</li>
+		<li>The lab3 directory should contain the following files:</li>
+		<ol type="a">
+			<li>README - Please include your name(s) and student ID(s) here.</li>
+			<li>compile.sh - a script to compile your source code.</li>
+			<li>run.sh - a script that runs your compiler. This script
+			should read 3-address code as input from stdin and write output to
+			stdout. The output is specified by the command line arguments
+			described in the previous section.</li>
+		</ol>
+	</ol>
+
+	<p>Turn in your assignment by emailing the final lab3-groupX.tgz to the 
+	instructor.<pre>
+&nbsp;</pre>
+	
+<b><font face="Verdana, Arial, Helvetica, sans-serif"><font size=4
+color="#330066">    
+Thanks & Acknowledgements
+</font></font></b>
+
+<p> These assignments are derived from
+<a href="http://www.cs.utexas.edu/users/mckinley/">Prof. Kathryn McKinley</a>'s
+<a href="http://www.cs.utexas.edu/users/mckinley/380C/labs/labs.html">Advanced 
+Compiler Techniques</a> class.
+
+<p>
+
+</body>
+</html>

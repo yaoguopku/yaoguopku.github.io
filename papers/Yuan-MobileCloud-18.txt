@@ -1,0 +1,14 @@
+@INPROCEEDINGS{Yuan-MobileCloud-18,
+author = {P. Yuan and Y. Guo and X. Chen and H. Mei},
+booktitle = {2018 6th IEEE International Conference on Mobile Cloud Computing, Services, and Engineering (MobileCloud)},
+title = {Device-Specific Linux Kernel Optimization for Android Smartphones},
+year = {2018},
+volume = {00},
+number = {},
+pages = {65-72},
+keywords={Kernel;Androids;Humanoid robots;Linux;Instruments;Optimization;Smart phones},
+doi = {10.1109/MobileCloud.2018.00018},
+url = {doi.ieeecomputersociety.org/10.1109/MobileCloud.2018.00018},
+ISSN = {2573-7562},
+month={Mar}
+}

@@ -1,0 +1,8 @@
+@INPROCEEDINGS{Wang-ISLPED-13,
+author={Chengke Wang and Fengrun Yan and Yao Guo and Xiangqun Chen},
+booktitle={Proceedings of 2013 IEEE International Symposium on Low Power Electronics and Design (ISLPED)},
+title={Power estimation for mobile applications with profile-driven battery traces},
+year={2013},
+pages={120-125},
+keywords={cells (electric);power aware computing;smart phones;Monsoon power monitor;coarse-grained battery traces;complex power models;measured power numbers;mobile applications;power characteristics;power dissipation rate estimation;power estimation;profile-driven battery traces;smart phones;user-level application;Batteries;Estimation;Mobile communication;Power demand;Power measurement;Smart phones},
+doi={10.1109/ISLPED.2013.6629277},}

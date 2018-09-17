@@ -1,0 +1,254 @@
+<html>
+<head>
+<title>Programming Assignment 2 -- CS 380C</title>
+<base href="http://www.cs.utexas.edu/users/mckinley/380C/index.html">
+<style type="text/css">
+.style2 {
+				color: #FF0000;
+}
+</style>
+
+<body>
+<ul>
+	<br>
+	<hr>
+	<p>
+	<center><b>
+	<font size=5
+		color="#330066" face="Verdana, Arial, Helvetica, sans-serif"> Lab 2: Dataflow and optimizations
+			</font> </b></center>
+
+
+	<hr>
+
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size=4 color="#330066"> Objective </font></font></b>
+	<p>The goal of this assignment is to develop an optimizer that
+	performs dataflow analysis and scalar optimizations. This assignment
+	has the following components:
+	<ol>
+		<li>Construct the Control Flow Graph (CFG). (5%)</li>
+		<li>Perform Strongly Connected Region (SCR) analysis. (5%)</li>
+		<li>Perform reaching definitions (20%) and use it to perform
+		simple constant propagation. (25%)</li>
+		<li>Perform live variable analysis (20%) and use it to perform
+		dead statement elimination. (25%)</li>
+		<li>Extra credit: perform constant propagation with the Wegman &
+		Zadeck algorithm. (+15%)</li>
+	</ol>
+
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size=4 color="#330066"> Project Description </font></font></b>
+	<p>You will add this functionality to the translator you implemented
+	for the Lab 1. Your compiler will call the csc compiler to compile a C
+	subset file named as &lt;filename.c&gt;. The optimizer will take
+	3-address format code as input, perform the analysis and
+	optimizations on it, and generate optimized 3-address format code as
+	output. The last step of your optimizer will convert this 3-address
+	form to C, using your translator from Lab 1.
+	
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size=4 color="#330066"> Getting Started On Lab2 </font></font></b>
+	<p>
+	<ol>
+		<li>Download the example C files and the CFG output at <A
+			HREF="http://www.cs.utexas.edu/users/mckinley/380C/labs/cs380c_lab2.tgz">http://www.cs.utexas.edu/users/mckinley/380C/labs/cs380c_lab2.tgz</A></li>
+
+		<li>Decompress the file on the cs unix machines using
+<pre>
+	&quot;tar xvfz cs380c_lab2.tgz&quot;.
+</pre>
+		This command will produce the following directory structure
+<pre>
+	cs380c_lab2
+		examples
+		lab2
+</pre> 
+		The examples directory contains 10 example c files named as &lt;filename.c&gt;,
+		and their CFG output named &lt;filename.ta.cfg&gt;, and two
+		bash scripts (check.sh, check-one-cfg.sh). Many of these are the same as in Lab 1. 
+		You can use the provided files to verify your implementation. 
+		</li>
+
+		<li>Implement your own optimizer in the lab2 directory. Your
+		compiler should accept 3-address code as input from stdin and write
+		output to stdout. Your compiler backend should generate the following
+		output:
+		<ol type="a">
+			<li>CFG</li>
+			<li>3-address code - a backend that prints out your optimized
+			(or unoptimized) 3-address format</li>
+			<li>C - functionality from Lab 1</li>
+			<li>An optimization report</li>
+		</ol>
+
+		<p></p>
+		Your compiler will be invoked by the script <tt><b>run.sh'</b></tt> and should accept
+		the following command line arguments.
+		<ol type="a">
+			<li><tt><b>-opt</b></tt>, a comma separated list of optimizations: <tt><b>scp</b></tt> (Simple
+			Constant Propagation), <tt><b>dse</b></tt> (Dead Statement Elimination) and <tt><b>wcp</b></tt>
+			(Wegman/Zadeck Constant Propagation)
+			<li><tt><b>-backend</b></tt>, specifies the particular code generator: <tt><b>c</b></tt>, <tt><b>cfg</b></tt>,
+			<tt><b>3addr</b></tt>, and <tt><b>rep</b></tt> (the optimization report)
+		</ol>
+
+		<p></p>
+		Here are some usage examples.
+		<ol type="a">
+			<li><tt><b>./run.sh -backend=c</b></tt> # This is lab 1</li>
+			<li><tt><b>./run.sh -backend=cfg</b></tt> # Part 1 of lab 2</li>
+			<li><tt><b>./run.sh -opt=scp -backend=3addr</b></tt> # Perform simple constant
+			propagation and generate output in 3-address format.</li>
+			<li><tt><b>./run.sh -opt=wcp -backend=c</b></tt> # Perform Wegman constant
+			propagation and produce C code as output.</li>
+			<li><tt><b>./run.sh -opt=scp -backend=cfg</b></tt> # Perform simple constant
+			propagation and write out the cfg (after these optimizations)</li>
+			<li><tt><b>./run.sh -opt=scp -backend=rep</b></tt> # Perform simple constant
+			propagation and write out the optimization report (after these
+			optimizations)</li>
+		</ol>
+		</li>
+
+		<li>Verify your implementation.<br>
+		Modify the scripts in example directory to check your own
+		implementation</li>
+
+		<li>Turn in your implementation.
+		(See "Turning In Your Assignment" section for more details.)</li>
+
+	</ol>
+
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size=4 color="#330066"> Optimizer Implementation Specification
+	</font></font></b>
+	<p>
+	<ol>
+		<li><b>Construct the Control Flow Graph (CFG).</b>
+		Before performing iterative data-flow analysis, you will need
+		to generate the CFG. The nodes of the CFG are the basic blocks. The
+		basic blocks in turn consist of a sequence of instructions in
+		3-address format.
+		<p>Your implementation should print out the lead instruction's number
+		as the basic block number. It also needs to print out the edges
+		between the basic blocks.The following is the <b>expected</b>
+		output for the gcd.c example:
+<pre> 
+	Function: 2
+	Basic blocks: 2 3 5 14
+	CFG:
+	2 -> 3
+	3 -> 5 14
+	5 -> 3
+	14 ->
+	Function: 18
+	Basic blocks: 18 30 46
+	CFG:
+	18 -> 30
+	30 -> 46
+	46 ->
+</pre>
+	 The output should be self-explanatory. The numbers are the instruction
+		numbers that start the functions and basic blocks (leaders from the
+		class lecture). The list of basic blocks and CFG successors should be
+		sorted numerically. No optimization report is required for CFG
+		generation.
+
+		<p>For all programs in the examples directory, the CFGs expressed
+		in the above format are given along with the source program. Before
+		turning in your assignment, you should check whether your output
+		matches these files. We will perform additional tests when grading,
+		and recommend you use your test files from Lab 1 and others to check
+		your code.
+		</li>
+		<li><b>Perform SCR analysis on the CFG.</b> Produce an optimization
+		report in the following format:
+<pre>
+	Function: 2
+	Basic blocks: 2 6 11 22
+	SCR: 2 6 11
+</pre></li>
+		<li><b>Perform simple constant propagation based on reaching
+		definitions.</b> You need to perform reaching definitions analysis and run
+		a simple constant propagation analysis that determines if the
+		reaching definitions to a variable are all the same constant. The execution time of
+		the algorithm is not a criterion. Your analysis should converge and
+		compute the correct results. You must report the
+		number of constants which have been propagated.
+		Produce an optimization report in the following format:
+<pre>
+	Function: 2
+	Number of constants propagated: 3
+	Function: 18
+	Number of constants propagated: 6
+</pre></li>
+
+		<li><b>Perform dead statement elimination based on liveness analysis.</b>
+		First perform liveness analysis and then use the result of the analysis to eliminate
+		statements that produce a result that is not live. You must report the
+		number of statements which have been eliminated. The statements in
+		strongly connected regions (SCR) and those that are not in a SCR
+		need to be counted separately.
+		Produce optimization report in the following format:
+<pre>
+	Function: 2
+	Number of statements eliminated in SCR: 1
+	Number of statements eliminated not in SCR: 2
+	Function: 18
+	Number of statements eliminated in SCR: 2
+	Number of statements eliminated not in SCR: 3
+</pre></li>
+
+		<li><b>Extra Credit.</b> Perform a more sophisticated constant
+		propagation algorithm based on your own insights and/or Wegman &
+		Zadeck, <a href=http://portal.acm.org/citation.cfm?id=103136>Constant
+		Propagation with Conditional Branches</a>, ACM Transactions on Programming
+		Languages and Systems, 13(2):181-210, April 1991. Report number of
+		constants your algorithm propagates. Produce an optimization report
+		with the same format as simple constant propagation.</li>
+	</ol>
+
+	<p><b><font face="Verdana, Arial, Helvetica, sans-serif"><font
+		size=4 color="#330066"> Turning In Your Assignment </font></font></b>
+	<p>Your assignment should contain the following.
+	<ol>
+		<li>A single tar.gz file named lab2-group<span class="style2">X</span>.tgz 
+		(X should be replaced by your group number), which, when extracted,
+		creates the lab2 directory.
+		<li>The lab2 directory can contain sub-directories.
+		<li>The lab2 directory should contain the following files:
+		<ol type="a">
+			<li>README - Please include your name(s) and student ID(s).</li>
+			<li>example-scp.c - a synthetic program that tests constant
+			propagation.</li>
+			<li>example-dse.c - a synthetic program that tests statement
+			elimination.</li>
+			<li>compile.sh - a script to compile your source code.</li>
+			<li>run.sh - a script that runs your compiler. This script
+			should read 3-address code as input from stdin and write the output to
+			stdout. The output is specified by the command line arguments
+			described above.</li>
+		</ol>
+		</li>
+	</ol>
+
+	<p>Turn in your assignment by emailing the final lab2-groupX.tgz to the 
+	instructor.<pre>
+&nbsp;</pre>
+
+	
+<b><font face="Verdana, Arial, Helvetica, sans-serif"><font size=4
+color="#330066">    
+Thanks & Acknowledgements
+</font></font></b><p>
+
+<p> These assignments are derived from
+				<a href="http://www.cs.utexas.edu/users/mckinley/">Prof. Kathryn 
+				McKinley</a>'s
+				<a href="http://www.cs.utexas.edu/users/mckinley/380C/labs/labs.html">
+				Advanced Compiler Techniques</a> class.
+
+<p>
+
+</body>
+</html>

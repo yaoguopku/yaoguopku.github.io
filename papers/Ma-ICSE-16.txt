@@ -1,0 +1,12 @@
+@INPROCEEDINGS{7883363, 
+author={Z. Ma and H. Wang and Y. Guo and X. Chen}, 
+booktitle={2016 IEEE/ACM 38th International Conference on Software Engineering Companion (ICSE-C)}, 
+title={LibRadar: Fast and Accurate Detection of Third-Party Libraries in Android Apps}, 
+year={2016}, 
+volume={}, 
+number={}, 
+pages={653-656}, 
+keywords={Android (operating system);program diagnostics;software libraries;API features;Android apps;Google Play;LibRadar;program analysis;static analysis;third-party libraries;Androids;Feature extraction;Google;Humanoid robots;Libraries;Picture archiving and communication systems;Privacy}, 
+doi={}, 
+ISSN={}, 
+month={May},}

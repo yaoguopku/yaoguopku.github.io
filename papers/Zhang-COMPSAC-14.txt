@@ -1,0 +1,16 @@
+@inproceedings{Zhang-COMPSAC-14,
+  author    = {Lin Zhang and
+               Mingxuan Yuan and
+               Yao Guo and
+               Xiangqun Chen and
+               Lei Chen},
+  title     = {Preserving Location-Related Privacy Collaboratively in Geo-social
+               Networks},
+  booktitle = {{IEEE} 38th Annual Computer Software and Applications Conference,
+               {COMPSAC} 2014, Vasteras, Sweden, July 21-25, 2014},
+  year      = {2014},
+  pages     = {584--589},
+  url       = {http://dx.doi.org/10.1109/COMPSAC.2014.94},
+  doi       = {10.1109/COMPSAC.2014.94},
+  timestamp = {Wed, 15 Oct 2014 04:31:08 +0200},
+}

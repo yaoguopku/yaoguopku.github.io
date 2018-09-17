@@ -1,0 +1,281 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Course Project</title>
+<style>
+<!--
+.w{color:#00c}
+.style1 {
+				font-size: medium;
+}
+.style2 {
+				color: #FF0000;
+}
+.style3 {
+				font-family: "Times New Roman";
+}
+</style>
+</head>
+
+<body bgcolor="#FFFFCC">
+
+<p align="center"><font face="Times New Roman" size="6"><b>Course Project 
+Descriptions<br>
+</b></font><b><font face="Times New Roman">(Advanced Compiler Techniques, Fall 
+20<span lang="zh-cn">11</span>)</font></b></p>
+<h1><font face="Times New Roman"><a name="SECTION00010000000000000000">
+<font size="5">Introduction</font></a> </font> </h1>
+<p><font face="Times New Roman">The purpose of the final project is to give you 
+a chance to focus on a specific problem, and to work out the solution to this 
+problem in detail. Your project should give you the opportunity to review the 
+current literature in your chosen area, to implement either the ideas you read 
+about or to implement your own improvements on those ideas, and to evaluate the 
+effectiveness of the ideas. You could develop new analyses, implement an 
+analysis recently proposed by other people, evaluate existing analyses or 
+optimizing techniques, or use program analyses to solve an interesting problem 
+(such as applications in software engineering, testing, debugging, 
+parallelization).</font></p>
+<p><font face="Times New Roman">Students will work on a specific project in 
+groups of 2-3 members.</font></p>
+<p><span lang="zh-cn"><span class="style3"><strong>Students who are not involved 
+in compiler-related research could choose to work on the
+<a href="labs/labs.html">regular programming assignments</a>.</strong></span></span></p>
+<p><b><font face="Times New Roman" size="5">Requirements</font></b></p>
+<ul>
+	<li><font face="Times New Roman"><b>Project Proposal (due 10/<span lang="zh-cn">31</span>)</b>: 
+	1-2 pages write-up on the project topic: motivation, problem to be solved, 
+	expected results, etc.</font></li>
+	<li><font face="Times New Roman"><b>Project Proposal Presentation (on 11/<span lang="zh-cn">3</span>)</b>: 
+	10-15 minutes introduction on the proposed project, including a short 
+	motivation, proposed solution, expected results, etc.</font></li>
+	<li><font face="Times New Roman"><b>Project Progress Report (due 12/<span lang="zh-cn">1</span>):</b> a short progress report (2-3 pages) on the project, reporting what 
+	you have done, remaining work and planned schedule.</font></li>
+	<li><font face="Times New Roman"><b>Project Presentation (on 12/<span lang="zh-cn">22</span>)</b>: 
+	a short talk (20min) on your project, slides required.</font></li>
+	<li><font face="Times New Roman"><b>Final Project Report (due 
+	<span lang="zh-cn">12/29</span>):</b> 
+	a detailed report, containing all aspects of the project, arranged in 
+	paper-style with abstract, introduction, main body and references. (You can 
+	find ACM Paper Templates for Word/Latex at
+	<a href="http://www.acm.org/chapters/policy/toolkit/template.html">
+	http://www.acm.org/chapters/policy/toolkit/template.html</a>)</font></li>
+</ul>
+<h1><a name="SECTION00020000000000000000"><font face="Times New Roman" size="5">
+Tools</font></a><font face="Times New Roman"> </font> </h1>
+<p><font face="Times New Roman">We recommend the Soot compiler infrastructure 
+from McGill University.</font></p><font FACE="Times New Roman">
+<ul>
+	<li>
+	<p ALIGN="LEFT">Soot main page:
+	<a href="http://www.sable.mcgill.ca/soot/">http://www.sable.mcgill.ca/soot/</a>
+	</font></li>
+	<li>
+	<p ALIGN="LEFT"><font FACE="Times New Roman">Soot download page:
+	<a href="http://www.sable.mcgill.ca/soot/soot_download.html">
+	http://www.sable.mcgill.ca/soot/soot_download.html</a></font></li>
+	<li>
+	<p ALIGN="LEFT"><font FACE="Times New Roman">Soot tutorials:
+	<a href="http://www.sable.mcgill.ca/soot/tutorial/">
+	http://www.sable.mcgill.ca/soot/tutorial/</a> </font></li>
+	<li>Liveness analysis example:
+	<ul>
+		<li><a href="slides/LiveVariablesAnalysis.java">
+		LiveVariablesAnalysis.java</a> </li>
+		<li><a href="slides/LiveVariablesTagger.java">LiveVariablesTagger.java</a> 
+		</li>
+		<li><a href="slides/LiveVariablesMain.java">LiveVariablesMain.java</a> 
+		</li>
+	</ul>
+	</li>
+</ul>
+<p><font face="Times New Roman">But you can use any of the freely available 
+compiler infrastructures: <a href="http://jikesrvm.sourceforge.net/">JikesRVM</a>,
+<a href="http://suif.stanford.edu/suif/">SUIF</a>,
+<a href="http://www.eclipse.org">Eclipse</a>,
+<a href="http://joeq.sourceforge.net/">Joeq</a>,
+<a href="http://wala.sourceforge.net/">Wala</a>, <a href="http://llvm.org/">LLVM</a>,
+<a href="http://gcc.gnu.org/">gcc</a>, <a href="http://www.aspectbench.org">abc</a>,
+<a href="http://cycleserv2.csail.mit.edu/Harpoon/">MIT-Flex</a>, etc.</font></p>
+<h1><font face="Times New Roman"><a name="SECTION00030000000000000000">
+<font size="5">Projects</font></a> <span lang="zh-cn" class="style1">(<span class="style2">This 
+list is obsolete!! For reference only!</span>)</span></font></h1>
+
+<p><font face="Times New Roman">A list of possible projects are listed below.
+<font color="#FF0000"><b>You are encouraged to propose a new project</b></font> 
+that is not listed here. The only requirement is that the project should have 
+some element of &quot;program&#39;&#39; analysis in it, although the &quot;program&#39;&#39; being 
+analyzed are not restricted to Java or C source code. </font></p>
+
+<ol>
+	<li><font face="Times New Roman"><b>Space Optimization:</b> Java Virtual 
+	machines are being implemented in small devices with restricted memory and 
+	caches. In this context it becomes important to reduce the size of the code 
+	(rather than the speed of the code). In this project the purpose will be to 
+	reduce the size of the bytecode, reduce the number of local variables, and 
+	reduce the maximum stack height, rename strings to reduce constant pool 
+	size, remove useless fields and useless methods, reverse inlining, and so 
+	on. Static size measurements can be used to evaluate the effectiveness of 
+	the optimizations. <br>&nbsp;</font></li>
+	<li><font face="Times New Roman"><b>Comparing intermediate representations</b>: 
+	The Soot infrastructure is a research infrastructre from McGill. While it 
+	has proven to be a useful research infrastructure utilized by many research 
+	groups, there are some deficiencies in the bytecode produced by Soot. This 
+	project would evaulate bytecode produced by javac, Soot, and Jikes (<a href="http://www.cs.utah.edu/classes/cs7968/eeide-project.pdf">jikesrvm.org</a>). 
+	What is different about the bytecode? How could the Soot bytecode be 
+	improved? Are there optimizations performed by Jikes and not by Soot? <br>&nbsp;</font></li>
+	<li><font face="Times New Roman"><b>Faster Data Flow Analysis for Soot:</b> 
+	The design of the Soot data flow analysis framework focuses on flexibility 
+	and genericity rather than on speed and optimal memory use. This project 
+	would focus on a speed and/or memory optimized data flow analysis framework 
+	for Soot, perhaps even at the expense of flexibility. </font>
+	<p><font face="Times New Roman">Possible areas that might be examined are: 
+	(1) finding more efficient representations of flow facts, (2) different 
+	work-list algorithms specialized to specific kinds of dataflow problems, and 
+	(3) avoiding analysis or reanalysis of parts of the CFG not impacted by this 
+	analysis. Other ideas are also welcome. <br>
+&nbsp;</font></p></li>
+	<li><font face="Times New Roman"><b>String optimizations on Java bytecode</b>: 
+	Modern versions of 
+	</font><tt><font face="Lucida Console">javac</font></tt><font face="Times New Roman"> 
+	generate efficient calls to StringBuffers for computations involving string 
+	concatenation in one expression. </font>
+	<p><font face="Times New Roman">For example, the expression: </font></p>
+	<pre><font face="Lucida Console" size="2">  y = x+&quot;h&quot;+1+&quot;l&quot;+&quot;jennifer&quot;</font></pre>
+	<p><font face="Times New Roman">would get generated as something like the 
+	following: 
+	</font></p>
+	<pre><font face="Lucida Console" size="2">  x = new StringBuffer
+  x.init
+  x.append(x)
+  x.append(&quot;h&quot;)
+  x.append(1)
+  ...
+  y = x.toString()</font></pre>
+	<p><font face="Times New Roman">However, if a method is computing a string 
+	via many different concatenations to a variable (as in a pretty printer or 
+	code generator), then not all of the string concatenations show up in a 
+	single expression - they are spread throughout the method body. Each smaller 
+	statement will result in a new StringBuffer and extraneous work. </font></p>
+	<p><font face="Times New Roman">The purpose of this project is to 
+	automatically detect and optimize String operations within a method body. <br>
+&nbsp;</font></p></li>
+	<li><font face="Times New Roman"><b>Less Naive Jimple</b>: Currently the 
+	Soot framework first produces very naive Jimple, and then applies a series 
+	of cleanup steps to produce tighter Jimple that is suitable for further 
+	optimizations. Although this is a very modular approach, it may be be case 
+	that it is more expensive to first produce very verbose Jimple than it would 
+	be to try and produce slightly better Jimple to begin with. </font>
+	<p><font face="Times New Roman">The purpose of this project is to analyze 
+	the costs involved in the process of going from bytecode to Jimple, and to 
+	suggest and implement improvements to this process. </font></p>
+	<p><font face="Times New Roman">Recently a Soot user reported some tuning 
+	that he felt helped speed up the process of producing Jimple, which 
+	included: </font></p>
+	<ul>
+		<li><font face="Times New Roman">Implemented parent and child pointers 
+		in the TypeVariable classes more efficiently </font></li>
+		<li><font face="Times New Roman">Changed SmartLocalDefs to use BitSets 
+		rather than HashSets for representing flow facts. </font></li>
+	</ul>
+	<p><font face="Times New Roman">These and other changes may make a 
+	significant improvement in the time it takes to produce good Jimple code. <br>
+&nbsp;</font></p></li>
+	<li><font FACE="Times New Roman" SIZE="3">
+	<p ALIGN="LEFT"><b>Efficient shape analysis on SSA form</b>: In many shape 
+	analyses, each object is modeled by the set of local variables that point to 
+	it. In the worst case, this could be any subset, so the analysis is 
+	exponential in the number of local variables. However, only local variables 
+	that are live are relevant to the analysis, and Static Single Assignment 
+	form has some useful properties regarding live variables. Can such a shape 
+	analysis be implemented more efficiently if the program being analyzed is in 
+	SSA form?<br>
+&nbsp;</font></li>
+	<li><font FACE="Times New Roman" SIZE="3">
+	<p ALIGN="LEFT"><b>Call graph construction</b>: A call graph is a 
+	pre-requisite for almost every interprocedural analysis for an 
+	object-oriented language such as Java. Many open problems remain (you can 
+	choose one): <br>
+	<br>
+	(a) Integrated development environments (IDEs) are one context in which call 
+	graphs are useful. However, precise call graph construction algorithms that 
+	construct a call graph from scratch are too slow to be executed after every 
+	change made to the program being edited. Design and implement an incremental 
+	call graph construction algorithm that could execute continuously in an IDE 
+	while the program is being modified.</p>
+	<p ALIGN="LEFT">(b) Most call graph construction algorithms require analysis 
+	of the whole program. This requirement is impractical since many programs 
+	rely on dynamically loaded libraries that may not be available for analysis. 
+	Design call graph construction algorithms for analyzing partial programs, 
+	and compare their precision against algorithms that have access to the whole 
+	program.</p>
+	<p ALIGN="LEFT">(c) Even when using precise analyses, call graphs for Java 
+	programs constructed by static analysis tend to contain many more methods 
+	than are actually executed when a benchmark is run. This project involves 
+	comparing dynamic (run-time) and static call graphs, finding causes of the 
+	differences, and suggesting improvements to either the test suite (to 
+	increase the dynamic call graph size) or to the static analysis (to reduce 
+	the static call graph size) to reduce the discrepancy.<br>
+	　</li></font>
+	<li>
+	<p ALIGN="LEFT"><font face="Times New Roman"><b>Comparing Pointer Analysis 
+	Effectiveness: </b>Many approaches are proposed for pointer analysis, 
+	including many alias and points-to analyses. Soot has implemented some 
+	points-to analyses already. The project is asking you to implement a couple 
+	of recently proposed pointer analysis approaches and compare their 
+	performance (efficiency, accuracy, etc.) with the implementation in Soot.<b><br>
+&nbsp;</b></font></li>
+	<li><font face="Times New Roman"><b>Refactoring Java in Soot</b>: All 
+	methods are not equal, and all parts of a method are not equal, meaning that 
+	some portions of a method may have hot parts, when other portions are cold 
+	(executed rarely). Since it takes time to compile cold parts, it has been 
+	suggested that such methods should be refactored so that only the hot parts 
+	remain in the method body and the cold parts are moved to other methods. The 
+	purpose of this project would be to use Soot to profile frequencies of 
+	important basic blocks. Then, based on the profiling factor out the cold 
+	code to new methods. <br><br>Reference: John Whaley. Partial Method 
+	Compilation using Dynamic Profiling, OOPSLA 2001. <br>
+&nbsp;</font></li>
+	<li><font face="Times New Roman"><b>Field Analysis and related optmization</b>: 
+	In [GRS00], simple analyses were presented based on object fields. 
+	Implementing such an analysis in Soot should be relatively simple. Once the 
+	analysis is implemented, bytecode optimizations could be performed. </font>
+	<p><font face="Times New Roman">[GRS00] Sanjay Ghemawat, Keith H. Randall, 
+	and Daniel J. Scales. Field analysis: getting useful and low-cost 
+	interprocedural information. PLDI 2000.<br>
+&nbsp;</font></li>
+	<li>
+	<p><font face="Times New Roman"><b>Projects in AspectJ:&nbsp; abc </b>is the 
+	AspectBench Compiler for AspectJ, developed by a team from Oxford, McGill 
+	and Aarhus ( <a name="tex2html4" href="http://www.aspectbench.org">
+	http://www.aspectbench.org</a>). The front-end of the compiler is developed 
+	using Polyglot and the back-end uses Soot.&nbsp; If you are interested in 
+	Aspect-Oriented Programming, many existing program analyses could also be 
+	modified to support AspectJ using <b>abc</b>.</font><b><font face="Times New Roman"><br>&nbsp;</font></b></li>
+	<li>
+	<p><font face="Times New Roman"> 
+	<b>Other Projects: </b>Many other analyses/problems can be 
+	implemented/solved using Soot, such as</font><ul>
+		<li><font face="Times New Roman">Object-Oriented Program Slicing on Java</font></li>
+		<li><font face="Times New Roman">Bug Detection with Program Analysis</font></li>
+		<li><font face="Times New Roman">Escape and Effect Analysis (</font><cite style="color: green; font-style: normal">www.cs.cornell.edu/~rugina/papers/cc07.pdf</cite><font face="Times New Roman">)</font></li>
+		<li><font face="Times New Roman">Locality Analysis &amp; Parallelization 
+		Optmization</font></li>
+		<li><font face="Times New Roman">Program Analysis for Security</font></li>
+		<li><b><font face="Times New Roman">Problems of your choice</font></b></li>
+	</ul></li>
+</ol>
+
+<h1><font size="5" face="Times New Roman">Past <a name="SECTION1874919425">Project 
+List</a></font></h1>
+<ul>
+	<li><a href="projectlist-08.htm">Project List 2008</a></li>
+	<li><span lang="zh-cn"><a href="projectlist-08.htm">Project List 2009</a></span></li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

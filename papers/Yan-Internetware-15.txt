@@ -1,0 +1,9 @@
+@inproceedings{Yan-Internetware-15,
+ author = {Lin Yan and Yao Guo and Xiangqun Chen and Hong Mei},
+ title = {A Study on Power Side Channels on Mobile Devices},
+ booktitle = {The Seventh Asia-Pacific Symposium on Internetware },
+ series = {Internetware'15},
+ year = {2015},
+ location = {Wuhan, China},
+ pages = {}
+}

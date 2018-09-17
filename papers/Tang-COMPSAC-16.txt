@@ -1,0 +1,12 @@
+@INPROCEEDINGS{7552105, 
+author={Z. Tang and Y. Guo and X. Chen}, 
+booktitle={2016 IEEE 40th Annual Computer Software and Applications Conference (COMPSAC)}, 
+title={Self-Adaptive Step Counting on Smartphones under Unrestricted Stepping Modes}, 
+year={2016}, 
+volume={1}, 
+number={}, 
+pages={788-797}, 
+keywords={gait analysis;health care;smart phones;wearable computers;DTW;SCR;WPD;health monitoring;location-based systems;pedometer apps;self-adaptive step counting;smartphones;stepping cycle recognition;unrestricted stepping modes;wearable electronics;Acceleration;Gravity;Heuristic algorithms;Legged locomotion;Sensors;Smart phones;Thyristors;Dynamic time warping;Gravity sensor;Human stepping model;Linear accelerometer;Self-adaptive;Step counting}, 
+doi={10.1109/COMPSAC.2016.187}, 
+ISSN={}, 
+month={June},}

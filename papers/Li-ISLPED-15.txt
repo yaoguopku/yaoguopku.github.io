@@ -1,0 +1,12 @@
+@INPROCEEDINGS{Li-ISLPED-15,
+  author =       {Yuanchun Li and Yao Guo and Junjun Kong and Xiangqun
+  Chen},
+  title =        {Fixing Sensor-Related Energy Bugs through Automated
+  Sensing Policy Instrumentation},
+  booktitle =    {ACM/IEEE International Symposium on Low-Power Electronics
+  and Design (ISLPED 2015)},
+  year =         {2015},
+  series =       {ISLPED 2015},
+  pages =        {321-326},
+  month =        {july},
+}

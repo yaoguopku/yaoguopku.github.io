@@ -1,0 +1,7 @@
+@INPROCEEDINGS{Wang-MobileCloud-13,
+author={Chengke Wang and Yao Guo and Yunnan Xu and Peng Shen and Xiangqun Chen},
+booktitle={IEEE MobileCloud 2016},
+title={Standby Energy Analysis and Optimization for Smartphones},
+year={2016},
+pages={},
+}

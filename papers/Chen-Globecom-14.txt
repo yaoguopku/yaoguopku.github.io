@@ -1,0 +1,10 @@
+@inproceedings{Chen-Globecom-14,
+ author = {Xin Chen and Junjun Kong and Guo, Yao and Chen, Xiangqun},
+ title = {An Empirical Study of Indoor Localization Algorithms with Densely Deployed APs},
+ booktitle = {Proceedings of GlobeCom},
+ series = {GlobeCom '14},
+ year = {2014},
+ location = {Austin, TX, USA},
+ pages = {},
+ numpages = {6},
+}
