@@ -1,0 +1,19 @@
+@InProceedings{Guo-SecureComm-18,
+author="Guo, Yao
+and Ma, Junming
+and Wu, Wenjun
+and Chen, Xiangqun",
+editor="Beyah, Raheem
+and Chang, Bing
+and Li, Yingjiu
+and Zhu, Sencun",
+title="Inferring UI States of Mobile Applications Through Power Side Channel Exploitation",
+booktitle="Security and Privacy in Communication Networks",
+year="2018",
+publisher="Springer International Publishing",
+address="Cham",
+pages="210--226",
+abstract="The UI (user interface) state of a mobile application is important for attackers since it exposes what is happening inside an application. Attackers could initiate attacks timely according to this information, for example inserting fake GUIs or taking screenshots of GUIs involving user's sensitive data. This paper proposes PoWatt, a method to infer the timing of sensitive UI occurrences by exploiting power side channels on mobile devices such as smartphones. Based on power traces collected and power patterns learned in advance, PoWatt applies a pattern matching algorithm to detect target UI occurrences within a series of continuous power traces. Experiment results on popular Android apps show that PoWatt can detect sensitive UI loading with an average precision of 71{\%} (up to 98{\%}) and an average recall rate of 70{\%} (up to 88{\%}) during offline detection. In real-time experiments for online detection, PoWatt can still detect sensitive UIs with a reasonable precision and recall, which can be successfully exploited by real-world attacks such as screenshot-based password stealing. Finally, we discuss the limitations of PoWatt and possible mitigation techniques.",
+isbn="978-3-030-01701-9"
+}
+

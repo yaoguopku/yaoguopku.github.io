@@ -1,0 +1,16 @@
+@INPROCEEDINGS{Hu-Saner-19,
+author={Y. {Hu} and H. {Wang} and L. {Li} and Y. {Guo} and G. {Xu} and R.
+{He}},
+booktitle={2019 IEEE 26th International Conference on Software Analysis,
+Evolution and Reengineering (SANER)},
+title={Want to Earn a Few Extra Bucks? A First Look at Money-Making Apps},
+year={2019},
+volume={},
+number={},
+pages={332-343},
+keywords={Task
+analysis;Google;Security;Privacy;Malware;Registers;Metadata;Money-making
+apps;Mobile Security;Android;Malware;Mobile Ads;Pay-Per-Install},
+doi={10.1109/SANER.2019.8668035},
+ISSN={1534-5351},
+month={Feb},}

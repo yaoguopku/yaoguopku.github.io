@@ -1,0 +1,12 @@
+@INPROCEEDINGS{Wang-ASE-19,
+author={H. {Wang} and H. {Liu} and X. {Xiao} and G. {Meng} and Y. {Guo}},
+booktitle={2019 34th IEEE/ACM International Conference on Automated Software Engineering (ASE)},
+title={Characterizing Android App Signing Issues},
+year={2019},
+volume={},
+number={},
+pages={280-292},
+keywords={Android (operating system);digital signatures;Android app signatures;compatibility issues;signature-related issues;security issues;Android app signing issues;Signature;Vulnerability;Mobile App;Certificate},
+doi={10.1109/ASE.2019.00035},
+ISSN={1938-4300},
+month={Nov},}

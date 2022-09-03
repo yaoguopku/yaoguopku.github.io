@@ -1,0 +1,20 @@
+@Article{Yuan-ScienceChina-2018,
+author="Yuan, Pengfei
+and Guo, Yao
+and Zhang, Lu
+and Chen, Xiangqun
+and Mei, Hong",
+title="Building application-specific operating systems: a profile-guided approach",
+journal="Science China Information Sciences",
+year="2018",
+month="Aug",
+day="13",
+volume="61",
+number="9",
+pages="092102",
+abstract="Although operating system optimization has been studied extensively, previous work mainly focuses on solving performance problems. In the cloud era, many servers only run a single application, making it desirable to provide an application-specific operating system (ASOS) that is most suitable for the application. In contrast to existing approaches that build ASOS by manual redesign and reimplementation, this paper presents Tarax, a compiler-based approach to constructing an ASOS for each application. With profile collected from executing the target application on an instrumented Linux kernel, Tarax recompiles the kernel while applying profile-guided optimizations (PGOs). Although GCC has already implemented the optimization process that can be applied to user applications, it does not work on the Linux kernel directly. We modify the Linux kernel and GCC to support kernel instrumentation and profile collection. We also modify GCC to reduce the size of optimized kernel images. We conduct experiments on six popular server applications: Apache, Nginx, MySQL, PostgreSQL, Redis and Memcached. Experimental results show that application performance improves by 8.8{\%} on average (up to 16{\%}) on the ASOS. We also perform detailed analysis to reveal how the resulting ASOS improves performance, and discuss future directions in ASOS construction.",
+issn="1869-1919",
+doi="10.1007/s11432-017-9418-9",
+url="https://doi.org/10.1007/s11432-017-9418-9"
+}
+

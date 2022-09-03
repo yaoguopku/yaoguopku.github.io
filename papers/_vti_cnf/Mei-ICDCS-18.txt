@@ -1,6 +1,10 @@
 vti_encoding:SR|utf8-nl
-vti_timelastmodified:TR|12 Jun 2018 01:42:43 -0000
+vti_timelastmodified:TR|04 Jan 2019 09:46:34 -0000
 vti_extenderversion:SR|12.0.0.6500
-vti_cacheddtm:TX|12 Jun 2018 01:42:43 -0000
-vti_filesize:IR|307
 vti_backlinkinfo:VX|publications.htm
+vti_author:SR|DESKTOP-J1AUCP4\\guo_y
+vti_modifiedby:SR|DESKTOP-J1AUCP4\\guo_y
+vti_nexttolasttimemodified:TW|04 Jan 2019 09:44:56 -0000
+vti_timecreated:TR|04 Jan 2019 09:44:56 -0000
+vti_cacheddtm:TX|04 Jan 2019 09:46:34 -0000
+vti_filesize:IR|743

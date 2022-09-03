@@ -1,0 +1,12 @@
+@ARTICLE{Guo-Access-17,
+author={Y. {Guo} and C. {Wang} and X. {Chen}},
+journal={IEEE Access},
+title={Understanding Application-Battery Interactions on Smartphones: A Large-Scale Empirical Study},
+year={2017},
+volume={5},
+number={},
+pages={13387-13400},
+keywords={energy consumption;power aware computing;smart phones;lightweight monitoring tool;mobile application development;coarse-grained battery data collection;energy consumption rate;battery discharging patterns;Android smartphones;battery life reduction;Smart phones;Batteries;Energy consumption;Data collection;Mobile communication;Servers;Internet;Mobile computing;smartphones;battery;energy consumption;user study},
+doi={10.1109/ACCESS.2017.2728620},
+ISSN={2169-3536},
+month={},}

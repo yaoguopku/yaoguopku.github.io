@@ -1,0 +1,22 @@
+@INPROCEEDINGS{Zong-CCR-19,
+author={Y. {Zong} and Y. {Guo} and X.
+{Chen}},
+booktitle={2019 IEEE International Conference on
+Service-Oriented System Engineering (SOSE)},
+title={Policy-Based
+Access Control for Robotic Applications},
+year={2019},
+volume={},
+number={},
+pages={368-3685},
+keywords={authorisation;data
+privacy;robot programming;robots;security aspects;ROS;basic
+permission control mechanism;privacy leakage;access control
+mechanism;extended policy-based access control model;robotic
+applications;modern robots;robotic systems;robot operating
+system;Access control;Service robots;Operating systems;Robot
+sensing systems;Adaptation models;Access control;policy-based
+access control;permissions;robots;robotic applications},
+doi={10.1109/SOSE.2019.00062},
+ISSN={2642-6587},
+month={April},}

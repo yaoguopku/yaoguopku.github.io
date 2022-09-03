@@ -1,0 +1,11 @@
+@inproceedings{Liu-AAAI-21,
+
+author = {Bingyan Liu and Yifeng Cai and Yao Guo and Xiangqun Chen},
+title = {TransTailor: Pruning the Pre-trained Model for Improved Transfer Learning},
+booktitle={AAAI 2021},
+year = {2021},
+pages = {},
+numpages = {},
+location = {Virtual Event, USA},
+series = {AAAI 2021} }
+

@@ -1,0 +1,18 @@
+@inproceedings{He-ICECCS-20,
+
+author = {Ru Ji and Ningyu He and Lei Wu and Haoyu Wang
+andGuangdong Bai and Yao Guo.},
+
+title = {{DEPOSafe}: Demystifying the Fake Deposit Vulnerability
+in Ethereum Smart Contracts},
+
+year = {2020},
+
+isbn = {},
+
+booktitle = {The 25th International Conference on Engineering of
+Complex Computer Systems (ICECCS 2020)},
+
+pages = {}
+
+}

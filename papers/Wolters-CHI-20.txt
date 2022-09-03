@@ -1,0 +1,34 @@
+@inproceedings{Wolters-CHI-20,
+author = {Wolters, Maria K. and Li, Shuobing and Wang, Haoyu and Yang, Xinyu
+and Guo, Yao},
+title = {Does the Presence of Privacy Relevant Information Affect App Market
+Choice?},
+year = {2020},
+isbn = {9781450368193},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3334480.3383078},
+doi = {10.1145/3334480.3383078},
+abstract = {While in most countries, Google Play and Apple App Store
+dominate, Chinese mobile phone users can choose among dozens of different
+app markets, which differ greatly in the information presented. This makes
+the Chinese mobile ecosystem a unique case study for investigating whether
+users actively choose app markets that conform to their preferences. We
+investigated this question in a survey of 200 Chinese users aged 18-49.
+Scenarios covered apps that require disclosure of different types of
+sensitive information (shopping, dating, health), with gaming as a baseline.
+Users preferred markets that were easy to use and had a wide choice of apps.
+Only nine users highlighted security as a feature. Despite this, they
+primarily used only one app market - the pre-installed one. App-market
+specific features were important for the game scenario, but less important
+for all others. We suggest that download decisions for most apps are made
+before users enter an app market, and discuss implications for presenting
+privacy and security information.},
+booktitle = {Extended Abstracts of the 2020 CHI Conference on Human Factors
+in Computing Systems},
+pages = {1¨C7},
+numpages = {7},
+keywords = {privacy, security, understanding users, app markets},
+location = {Honolulu, HI, USA},
+series = {CHI EA '20}
+}

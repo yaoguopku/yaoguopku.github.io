@@ -1,0 +1,15 @@
+@ARTICLE{Hu-TDSC-19,
+author={Y. {Hu} and H. {Wang} and Y. {Zhou} and Y. {Guo} and L. {Li} and B.
+{Luo} and F. {Xu}},
+journal={IEEE Transactions on Dependable and Secure Computing},
+title={Dating with Scambots: Understanding the Ecosystem of Fraudulent
+Dating Applications},
+year={2019},
+volume={},
+number={},
+pages={1-1},
+keywords={Google;Malware;Ecosystems;Systematics;Avatars;Advertising;Fraud;Mobile
+App;Dating App;Malware;Android},
+doi={10.1109/TDSC.2019.2908939},
+ISSN={1545-5971},
+month={},}

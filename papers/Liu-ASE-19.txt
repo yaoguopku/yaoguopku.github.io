@@ -1,0 +1,18 @@
+@INPROCEEDINGS{Liu-ASE-19,
+author={T. {Liu} and H. {Wang} and L. {Li} and G. {Bai} and Y. {Guo} and G. 
+{Xu}},
+booktitle={2019 34th IEEE/ACM International Conference on Automated Software 
+Engineering (ASE)},
+title={DaPanda: Detecting Aggressive Push Notifications in Android Apps},
+year={2019},
+volume={},
+number={},
+pages={66-78},
+keywords={Android (operating system);mobile computing;smart 
+phones;aggressive push notifications;mobile push notifications;global mobile 
+app ecosystem;notification-relevant runtime information;Android 
+apps;DaPanda;push notification advertisement;Push notification;dynamic 
+analysis;advertisement;Android;mobile app},
+doi={10.1109/ASE.2019.00017},
+ISSN={1938-4300},
+month={Nov},}

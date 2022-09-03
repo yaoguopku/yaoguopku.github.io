@@ -1,0 +1,11 @@
+@inproceedings{Liu-AAAI-21,
+
+author = {Yangyu Hu and Haoyu Wang and Tiantong Ji and Xusheng Xiao and Xiapu Luo and Peng Gao and Yao Guo},
+title = {CHAMP: Characterizing Undesired App Behaviors from User Comments based on Market Policies},
+booktitle={ICSE 2021},
+year = {2021},
+pages = {},
+numpages = {},
+location = {Virtual Event, USA},
+series = {ICSE 2021} }
+

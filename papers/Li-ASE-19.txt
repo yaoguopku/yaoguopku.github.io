@@ -1,0 +1,21 @@
+@INPROCEEDINGS{Li-ASE-19,
+author={Y. {Li} and Z. {Yang} and Y. {Guo} and X. {Chen}},
+booktitle={2019 34th IEEE/ACM International Conference on Automated Software 
+Engineering (ASE)},
+title={Humanoid: A Deep Learning-Based Approach to Automated Black-box 
+Android App Testing},
+year={2019},
+volume={},
+number={},
+pages={1070-1073},
+keywords={Android (operating system);graphical user interfaces;learning 
+(artificial intelligence);neural nets;program testing;deep learning-based 
+approach;automated input generators;GUI;black-box input 
+generators;brute-force searching strategies;automated black-box Android app 
+testing tool;deep neural network model;human interaction traces;test input 
+generation;open-source apps;humanoid;software testing;automated test input 
+generation;graphical user interface;deep learning;mobile 
+application;Android},
+doi={10.1109/ASE.2019.00104},
+ISSN={1938-4300},
+month={Nov},}

@@ -1,0 +1,12 @@
+@INPROCEEDINGS{8377717, 
+author={Z. Kan and H. Wang and G. Xu and Y. Guo and X. Chen}, 
+booktitle={2018 IEEE 42nd Annual Computer Software and Applications Conference (COMPSAC)}, 
+title={Towards Light-Weight Deep Learning Based Malware Detection}, 
+year={2018}, 
+volume={01}, 
+number={}, 
+pages={600-609}, 
+keywords={convolution;feature extraction;feedforward neural nets;invasive software;learning (artificial intelligence);operating systems (computers);networks;polymorphic samples;neural network based detection;feature extraction;light-weight PC malware detection system;deep convolutional neural network;grouped instruction sequences;operating systems;instruction analyzer;light-weight deep learning based malware detection;CNN;Malware;Feature extraction;Machine learning;Neural networks;Training;Data mining;malware detection;deep learning;machine learning;neural network;Windows platform}, 
+doi={10.1109/COMPSAC.2018.00092}, 
+ISSN={0730-3157}, 
+month={July},}

@@ -1,0 +1,20 @@
+@INPROCEEDINGS{Li-BigData-18,
+author={Y. {Li} and Z. {Yang} and Y. {Guo} and X. {Chen} and Y. {Agarwal}
+and J. I. {Hong}},
+booktitle={2018 IEEE International Conference on Big Data (Big Data)},
+title={Automated Extraction of Personal Knowledge from Smartphone Push
+Notifications},
+year={2018},
+volume={},
+number={},
+pages={733-742},
+keywords={data mining;information retrieval;learning (artificial
+intelligence);mobile computing;smart phones;smartphone push
+notifications;notification templates;personal knowledge extraction;template
+semantics;personal knowledge base;pattern mining;machine learning;mobile
+apps;Semantics;Knowledge based systems;Data mining;Software;Servers;Mobile
+handsets;Task analysis;Personal data;knowledge base;knowledge
+extraction;push notifications;privacy},
+doi={10.1109/BigData.2018.8621866},
+ISSN={},
+month={Dec},}

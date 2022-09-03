@@ -1,0 +1,11 @@
+@INPROCEEDINGS{Zhang-SEKE-18,
+author={Chengpeng Zhang and Haoyu
+Wang and Ran Wang and Yao Guo and Guoai Xu},
+booktitle={2018 IEEE
+International Conference on Software Engineering and Knowledge
+Engineering (SEKE)},
+title={Re-checking App Behavior against App
+Description in the Context of Third-party Libraries},
+year={2018},
+volume={}, number={}, pages={},
+month={July}}

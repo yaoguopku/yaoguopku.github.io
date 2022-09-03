@@ -1,0 +1,11 @@
+@inproceedings{Liu-UbiComp-21,
+
+author = {Bingyan Liu and Yuanchun Li and Yunxin Liu and Yao Guo and Xiangqun Chen},
+title = {PMC: A Privacy-preserving Deep Learning Model Customization Framework for Edge Computing},
+booktitle={ACM IMWUT (UbiComp 2021)},
+year = {2021},
+pages = {},
+numpages = {},
+location = {Virtual Event, USA},
+series = {UbiComp 2021} }
+

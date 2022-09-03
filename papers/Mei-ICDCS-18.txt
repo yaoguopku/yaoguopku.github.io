@@ -1,11 +1,12 @@
-@InProceedings{Mei-ICDCS18, 
+@InProceedings{Mei-ICDCS-18, 
 author={Hong Mei and Yao Guo}, 
-booktitle={2018 International Conference on Distributed Computing Systems (ICDCS)}, 
+booktitle={2018 IEEE 38th International Conference on Distributed Computing Systems (ICDCS)}, 
 title={Operating Systems for Internetware: Challenges and Future Directions}, 
 year={2018}, 
-pages={}, 
-keywords={}, 
-doi={}, 
-ISSN={}, 
-month={July}
-}
+volume={}, 
+number={}, 
+pages={1377-1384}, 
+keywords={Internet;Linux;Microsoft Windows (operating systems);ubiquitous computing;Internetware Operating Systems;Internetware OS;future Internet-based applications;resource management;ubiquitous operating systems;Linux;Windows;Internet;Robots;Microsoft Windows;Linux;Hardware;Operating systems, Internetware, software-defined everything, ubiquitous operating systems}, 
+doi={10.1109/ICDCS.2018.00138}, 
+ISSN={2575-8411}, 
+month={July},}

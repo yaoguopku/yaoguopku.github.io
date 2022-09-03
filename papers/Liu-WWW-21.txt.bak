@@ -1,0 +1,11 @@
+@inproceedings{He-Security-20,
+
+author = {Ningyu He and Ruiyi Zhang and Haoyu Wang and Lei Wu and
+Xiapu Luo and Yao Guo and Ting Yu and Xuxian Jiang},
+title = {EOSafe: Security analysis of EOSIO smart contracts},
+booktitle={The 30th USENIX Security Symposium (USENIX Security 2021)},
+year = {2021},
+pages = {}, 
+numpages = {}, 
+location = {Virtual Event, USA}, 
+series = {Usenix Security 2021} }
