@@ -1,0 +1,9 @@
+@ARTICLE{Zhang-TITS-22,
+  author={Zhang, Shaokun and Guo, Yao and Zhao, Peize and Zheng, Chuanpan and Chen, Xiangqun},
+  journal={IEEE Transactions on Intelligent Transportation Systems}, 
+  title={A Graph-Based Temporal Attention Framework for Multi-Sensor Traffic Flow Forecasting}, 
+  year={2022},
+  volume={23},
+  number={7},
+  pages={7743-7758},
+  doi={10.1109/TITS.2021.3072118}}
